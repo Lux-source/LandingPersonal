@@ -9,6 +9,15 @@ import CSharp from "./icons/CSharp.astro";
 import Blazor from "./icons/Blazor.astro";
 import SQLite from "./icons/SQLite.astro";
 
+// Importar los JSON de traducciones:
+import translationsES from "../../local/es.json";
+import translationsEN from "../../local/en.json";
+
+// Definimos el idioma por defecto (es). Si llamas <Projects lang="en" />, se usará el en.json
+const { lang = "es" } = Astro.props;
+const t = lang === "en" ? translationsEN : translationsES;
+
+// Mantenemos las etiquetas tal cual
 const TAGS = {
 	AWS: {
 		name: "AWS",
@@ -46,29 +55,27 @@ const TAGS = {
 	},
 };
 
+// Definimos los proyectos consultando el JSON (t.projects...)
 const PROJECTS = [
 	{
-		title: "myCloudDocs",
-		description:
-			"Repositorio donde guardo la documentación de diversos proyectos que he ido realizando usando los servicios de AWS",
+		title: t.projects.myCloudDocs.title,
+		description: t.projects.myCloudDocs.description,
 		link: "",
 		github: "https://github.com/Lux-source/myCloudDocs",
 		image: "/projects/myCloudDocs.gif",
 		tags: [TAGS.AWS],
 	},
 	{
-		title: "Eterna",
-		description:
-			"Plataforma de e-commerce, para venta de relojes, desarrollada con Next.js, MongoDB y Tailwind CSS, que incluye una REST API segura con autenticación JWT",
+		title: t.projects.eterna.title,
+		description: t.projects.eterna.description,
 		link: "",
 		github: "https://github.com/Lux-source/WES_WatchShop",
 		image: "/projects/ecommerceEterna.gif",
 		tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.MONGO],
 	},
 	{
-		title: "Device Management App",
-		description:
-			"Aplicación Full Stack desarrollada en equipo usando metodologías ágiles (Scrum), C#, Blazor y SQLite. Implementa pruebas unitarias con xUnit y pipelines automatizados de CI/CD en Azure DevOps para despliegues continuos",
+		title: t.projects.deviceManagementApp.title,
+		description: t.projects.deviceManagementApp.description,
 		link: "",
 		github:
 			"https://dev.azure.com/SE2425TheAvengers/SEIIProject/_git/SEIIProject",

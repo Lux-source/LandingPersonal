@@ -1,8 +1,13 @@
 ---
 import EducationItem from "./EducationItem.astro";
-import { t } from "../utils/i18n.js";
-const { lang } = Astro.props;
-const EDUCATION = t(lang, "education");
+import translationsES from "../../local/es.json";
+import translationsEN from "../../local/en.json";
+
+const { lang = "es" } = Astro.props;
+const t = lang === "en" ? translationsEN : translationsES;
+
+// "education" aquí es el array
+const EDUCATION = t.education;
 ---
 
 <section class="education">

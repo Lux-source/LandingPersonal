@@ -10,10 +10,8 @@ import translationsEN from "../../local/en.json";
 // Valor por defecto para 'lang' es "es", pero si lo llamas con <Hero lang="en" /> usará inglés
 const { lang = "es" } = Astro.props;
 
-// Selecciona el JSON según el idioma
 const t = lang === "en" ? translationsEN : translationsES;
 
-// Imagen alt
 const personalImageAlt = "Lucian Andrei Negoita";
 ---
 

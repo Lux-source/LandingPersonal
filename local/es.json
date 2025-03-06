@@ -3,6 +3,7 @@
 		"nav": {
 			"experiencia": "Experiencia",
 			"proyectos": "Proyectos",
+			"education": "Formación",
 			"sobreMi": "Sobre mí",
 			"contacto": "Contacto"
 		}
@@ -17,8 +18,8 @@
 	"aboutMe": {
 		"role": "Arquitectura Cloud | DevOps | Desarrollo Full Stack",
 		"description": "Estudiante de Ingeniería Informática con fuerte interés en Cloud Computing, DevOps y Desarrollo Full Stack. Tengo experiencia diseñando e implementando soluciones en AWS, automatización y CI/CD, trabajando en equipos ágiles.",
-		"p1": "Mi nombre es <strong>Lucian Andrei Negoita</strong>. Actualmente estoy cursando Ingeniería Informática. Mi enfoque está en Cloud Computing, DevOps y Desarrollo Full Stack.",
-		"p2": "Diseñar la arquitectura de aplicaciones complejas es súper interesante, no sé qué escribir aquí...",
+		"p1": "Actualmente curso el Grado en Ingeniería Informática (modalidad bilingüe), con especialización en soluciones cloud, DevOps y desarrollo full stack.",
+		"p2": "He liderado y participado en diversos proyectos técnicos, incluyendo desarrollo de aplicaciones web escalables, análisis y filtrado avanzado de datos, así como el diseño e implementación de algoritmos de búsqueda e inteligencia artificial. Mi enfoque profesional está orientado hacia la arquitectura cloud, las prácticas DevOps y el Desarrollo Full Stack.",
 		"contactLabel": "Contacto:",
 		"telLabel": "Tel:",
 		"tel": "(+34) 671 901 629",
