@@ -1,0 +1,28 @@
+---
+
+---
+
+<button
+	id="lang-toggle"
+	class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-lg cursor-pointer"
+>
+	🇬🇧
+</button>
+
+<script is:inline>
+	const button = document.getElementById("lang-toggle");
+
+	const updateButtonText = () => {
+		const lang = localStorage.getItem("lang") || "es";
+		button.textContent = lang === "es" ? "🇬🇧" : "🇪🇸";
+	};
+
+	button.addEventListener("click", () => {
+		const current = localStorage.getItem("lang") || "es";
+		const newLang = current === "es" ? "en" : "es";
+		localStorage.setItem("lang", newLang);
+		window.location.reload();
+	});
+
+	updateButtonText();
+</script>

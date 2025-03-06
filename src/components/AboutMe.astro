@@ -1,9 +1,12 @@
 ---
+import { t } from "../utils/i18n.js";
+
 const about = {
 	name: "Lucian Andrei Negoita",
-	role: "Arquitectura Cloud | DevOps | Full Stack Development",
-	description: `Estudiante de Ingeniería Informática con fuerte interés en Cloud Computing, DevOps y Full Stack Development. Tengo experiencia diseñando e implementando soluciones en AWS, automatización y CI/CD, trabajando en equipos ágiles.`,
+	role: t("aboutMe.role"),
+	description: t("aboutMe.description"),
 };
+
 const personalImageAlt = "Lucian Andrei Negoita";
 ---
 
@@ -13,37 +16,34 @@ const personalImageAlt = "Lucian Andrei Negoita";
 	<div
 		class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
 	>
+		<p set:html={t("aboutMe.p1")} />
+		<p>{t("aboutMe.p2")}</p>
 		<p>
-			Me llamo <strong>{about.name}</strong>. Actualmente curso Ingeniería
-			Informática. Mi enfoque se centra en Computación en la Nube, DevOps y
-			Desarrollo Full Stack.
-		</p>
-		<p>
-			Diseñar la Arquitectura de aplicaciones complejas es super interesante no
-			se que poner...
-		</p>
-		<p>
-			<strong>Contacto:</strong>
-			<a href="mailto:negoitalucianandrei@gmail.com" class="underline"
-				>negoitalucianandrei@gmail.com</a
-			> | Tel: (+34) 671 901 629
+			<strong>{t("aboutMe.contactLabel")}</strong>
+			<a href="mailto:negoitalucianandrei@gmail.com" class="underline">
+				negoitalucianandrei@gmail.com
+			</a> | {t("aboutMe.telLabel")}
+			{t("aboutMe.tel")}
 		</p>
 		<p>
 			<a
 				href="https://linkedin.com/in/lucian-andrei-negoita"
 				target="_blank"
-				class="underline">LinkedIn</a
-			> |
-			<a href="https://github.com/Lux-source" target="_blank" class="underline"
-				>GitHub</a
+				class="underline"
 			>
+				{t("aboutMe.linkedin")}
+			</a> |
+			<a href="https://github.com/Lux-source" target="_blank" class="underline">
+				{t("aboutMe.github")}
+			</a>
 		</p>
+		<p>{t("aboutMe.description")}</p>
 	</div>
 	<img
 		width="200"
 		height="200"
 		src="/me.webp"
-		alt={personalImageAlt}
+		alt="Lucian Andrei Negoita"
 		class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
 		style="object-position: 50% 50%"
 	/>

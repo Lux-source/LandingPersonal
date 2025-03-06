@@ -1,0 +1,33 @@
+{
+	"header": {
+		"nav": {
+			"experiencia": "Experience",
+			"proyectos": "Projects",
+			"sobreMi": "About Me",
+			"contacto": "Contact"
+		}
+	},
+	"hero": {
+		"intro": "Hello, I'm Lucian Andrei Negoita",
+		"description": "Computer Science student with a strong interest in <strong>Cloud Architecture, DevOps, and Full Stack Development</strong>.",
+		"badge": "Available for Work",
+		"contactMe": "Contact Me",
+		"linkedin": "LinkedIn"
+	},
+	"aboutMe": {
+		"role": "Cloud Architecture | DevOps | Full Stack Development",
+		"description": "Computer Science student with a strong interest in Cloud Computing, DevOps, and Full Stack Development. I have experience designing and implementing AWS solutions, automation, and CI/CD, working in agile teams.",
+		"p1": "My name is <strong>Lucian Andrei Negoita</strong>. I'm currently studying Computer Engineering. My focus is on Cloud Computing, DevOps, and Full Stack Development.",
+		"p2": "Designing the architecture of complex applications is super interesting, I don't know what else to say...",
+		"contactLabel": "Contact:",
+		"telLabel": "Phone:",
+		"tel": "(+34) 671 901 629",
+		"linkedin": "LinkedIn",
+		"github": "GitHub"
+	},
+	"footer": {
+		"text": "© {year} <strong>Lucian Andrei Negoita</strong>. Inspired by the <a href=\"https://midu.dev/\" target=\"_blank\" class=\"hover:underline\">midudev</a> project.",
+		"sobreMi": "About Me",
+		"contacto": "Contact"
+	}
+}
