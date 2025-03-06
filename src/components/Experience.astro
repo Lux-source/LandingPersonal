@@ -1,30 +1,39 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import ExperienceItem from "./ExperienceItem.astro";
 const EXPERIENCE = [
-  {
-    date: "Actualmente...",
-    title: "Creador de Contenido",
-    company: "Twitch",
-    description:
-      "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
-    link: "https://twitch.tv/midudev",
-  },
-  {
-    date: "Septiembre 2022",
-    title: "Principal Frontend Engineer",
-    company: "Adevinta Spain",
-    description:
-      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
-  },
-]
+	{
+		date: "Junio 2021 - Marzo 2022",
+		title: "Cryptocurrency Mining Project",
+		company: "Freelance",
+		description:
+			"Gestión y operación de un sistema de minería de Ethereum mediante HiveOS. Monitoreo, optimización y resolución de incidencias.",
+		link: "",
+	},
+	{
+		date: "Febrero 2024 - Mayo 2024",
+		title: "AWS Serverless Data Processing Pipeline",
+		company: "Proyecto Personal",
+		description:
+			"Diseñé e implementé una pipeline en AWS usando S3, DynamoDB y Lambda para análisis en tiempo real de datos en e-commerce.",
+		link: "",
+	},
+	{
+		date: "Septiembre 2024 - Diciembre 2024",
+		title: "Web-based E-commerce for Watches",
+		company: "Proyecto Académico",
+		description:
+			"Desarrollé una plataforma de e-commerce con Next.js, MongoDB y Tailwind CSS, incluyendo una REST API segura con autenticación JWT.",
+		link: "",
+	},
+];
 ---
 
 <ol class="relative mt-16">
-  {
-    EXPERIENCE.map((experience) => (
-      <li class="">
-        <ExperienceItem {...experience} />
-      </li>
-    ))
-  }
+	{
+		EXPERIENCE.map((experience) => (
+			<li>
+				<ExperienceItem {...experience} />
+			</li>
+		))
+	}
 </ol>
