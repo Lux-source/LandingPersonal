@@ -1,0 +1,40 @@
+---
+import EducationItem from "./EducationItem.astro";
+
+const EDUCATION = [
+	{
+		date: "Sept 2022 - Junio 2026",
+		title: "Computer Science Degree",
+		institution: "Universidad de Castilla-La Mancha",
+		description:
+			"Estudios en Ingeniería Informática, adquiriendo conocimientos en desarrollo de software, algoritmos y sistemas.",
+	},
+	{
+		date: "Sept 2018 - Ene 2022",
+		title: "Medical Degree",
+		institution: "Universidad de Castilla-La Mancha",
+		description:
+			"Estudios en Medicina, que aportan una perspectiva multidisciplinaria.",
+	},
+	{
+		date: "Sept 2016 - May 2018",
+		title: "High School Diploma in Sciences",
+		institution: "Health Sciences and Technology",
+		description:
+			"Formación en ciencias, enfatizando los fundamentos de la tecnología.",
+	},
+];
+---
+
+<section class="education py-8">
+	<h2 class="text-3xl font-bold mb-4">Formación</h2>
+	<ol class="relative mt-16">
+		{
+			EDUCATION.map((edu) => (
+				<li class="mb-8">
+					<EducationItem {...edu} />
+				</li>
+			))
+		}
+	</ol>
+</section>
