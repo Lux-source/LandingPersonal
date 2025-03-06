@@ -3,35 +3,41 @@ import EducationItem from "./EducationItem.astro";
 
 const EDUCATION = [
 	{
-		date: "Sept 2022 - Junio 2026",
-		title: "Computer Science Degree",
+		date: "Febrero 2025 - Junio 2026",
+		title:
+			"Curso Universitario de Formación Avanzada en Herramientas Digitales Aplicadas al Transporte y la Logística",
 		institution: "Universidad de Castilla-La Mancha",
 		description:
-			"Estudios en Ingeniería Informática, adquiriendo conocimientos en desarrollo de software, algoritmos y sistemas.",
+			"Curso enfocado en tecnologías emergentes y metodologías ágiles aplicadas a logística y transporte, destacando gestión de proyectos Agile (Scrum, Kanban), Cloud computing (AWS, Lambda, EC2, S3), IA, Big Data, Blockchain, robótica y ciberseguridad",
+	},
+	{
+		date: "Sept 2022 - Feb 2026",
+		title: "Ingeniería Informática",
+		institution: "Universidad de Castilla-La Mancha",
+		description:
+			"Estudios en Ingeniería Informática (modalidad bilingüe), adquiriendo conocimientos en desarrollo de software, algoritmos y sistemas",
 	},
 	{
 		date: "Sept 2018 - Ene 2022",
-		title: "Medical Degree",
+		title: "Medicina",
 		institution: "Universidad de Castilla-La Mancha",
 		description:
-			"Estudios en Medicina, que aportan una perspectiva multidisciplinaria.",
+			"Estudios en Medicina, que aportan una perspectiva multidisciplinaria",
 	},
 	{
 		date: "Sept 2016 - May 2018",
-		title: "High School Diploma in Sciences",
-		institution: "Health Sciences and Technology",
-		description:
-			"Formación en ciencias, enfatizando los fundamentos de la tecnología.",
+		title: "Bachillerato de Ciencias",
+		institution: "Ciencias de la Salud y Tecnológía",
+		description: "Formación en ciencias",
 	},
 ];
 ---
 
-<section class="education py-8">
-	<h2 class="text-3xl font-bold mb-4">Formación</h2>
-	<ol class="relative mt-16">
+<section class="education">
+	<ol class="relative mt-8">
 		{
 			EDUCATION.map((edu) => (
-				<li class="mb-8">
+				<li class="flex flex-col gap-y-16">
 					<EducationItem {...edu} />
 				</li>
 			))
