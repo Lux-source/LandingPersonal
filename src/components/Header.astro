@@ -15,29 +15,29 @@ const navItems = [
 	},
 ];
 
-// Idioma por defecto
 const { lang = "es" } = Astro.props;
-
 const t = lang === "en" ? translationsEN : translationsES;
 ---
 
-<header
-	class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
->
+<header class="fixed top-1 left-1/2 transform -translate-x-1/2 z-10">
 	<nav
-		class="flex px-2 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center"
+		class="flex items-center gap-3 px-4 py-2 rounded-full shadow-md backdrop-blur-md bg-white/80 dark:bg-gray-900/70 text-sm font-medium text-gray-700 dark:text-gray-200"
 	>
 		{
 			navItems.map((item) => (
 				<a
 					href={item.url}
-					class="mx-2 hover:text-teal-600 dark:hover:text-emerald-400 transition-colors"
+					class="px-2 transition hover:text-teal-600 dark:hover:text-emerald-400"
 				>
 					{t.header.nav[item.label]}
 				</a>
 			))
 		}
-		<ThemeToggle />
-		<LanguageToggle lang={lang} />
+		<div
+			class="flex items-center gap-2 pl-2 border-l border-gray-300 dark:border-gray-600"
+		>
+			<ThemeToggle />
+			<LanguageToggle lang={lang} />
+		</div>
 	</nav>
 </header>
