@@ -8,19 +8,19 @@
 		}
 	},
 	"hero": {
-		"intro": "Hi, I'm Lucian Andrei Negoita",
-		"description": "Computer Science student with a strong interest in <strong>Cloud Architecture, DevOps, and Full Stack Development</strong>.",
-		"badge": "Available for work",
-		"contactMe": "Contact Me",
+		"intro": "Hello, I'm Lucian Andrei Negoita",
+		"description": "Computer Engineering student with a strong interest in <strong>Cloud Architecture, DevOps, and Full Stack Development</strong>.",
+		"badge": "Open to work",
+		"contactMe": "Contact me",
 		"linkedin": "LinkedIn"
 	},
 	"aboutMe": {
 		"role": "Cloud Architecture | DevOps | Full Stack Development",
-		"description": "Computer Science student with a strong interest in Cloud Computing, DevOps, and Full Stack Development. I have experience designing and implementing AWS solutions, automation, and CI/CD, working in agile teams.",
-		"p1": "My name is <strong>Lucian Andrei Negoita</strong>. I'm currently studying Computer Science, focusing on Cloud Computing, DevOps, and Full Stack Development.",
-		"p2": "Designing the architecture of complex applications is very interesting. (to be completed...)",
+		"description": "Computer Engineering student with a strong interest in Cloud Computing, DevOps, and Full Stack Development. I have experience designing and implementing solutions on AWS, automation and CI/CD, working in agile teams.",
+		"p1": "My name is <strong>Lucian Andrei Negoita</strong>. I am currently studying Computer Engineering. My focus is on Cloud Computing, DevOps, and Full Stack Development.",
+		"p2": "Designing the architecture of complex applications is super interesting, I don't know what to write here...",
 		"contactLabel": "Contact:",
-		"telLabel": "Phone:",
+		"telLabel": "Tel:",
 		"tel": "(+34) 671 901 629",
 		"linkedin": "LinkedIn",
 		"github": "GitHub"
@@ -30,35 +30,35 @@
 			"date": "February 2025 - June 2026",
 			"title": "Advanced University Course in Digital Tools Applied to Transportation and Logistics",
 			"institution": "University of Castilla-La Mancha",
-			"description": "Course focused on emerging technologies and agile methodologies applied to logistics and transportation, emphasizing Agile project management (Scrum, Kanban), Cloud computing (AWS, Lambda, EC2, S3), AI, Big Data, Blockchain, robotics, and cybersecurity."
+			"description": "A course focused on emerging technologies and agile methodologies applied to logistics and transportation, highlighting Agile project management (Scrum, Kanban), Cloud computing (AWS, Lambda, EC2, S3), AI, Big Data, Blockchain, robotics, and cybersecurity"
 		},
 		{
 			"date": "Sept 2022 - Feb 2026",
-			"title": "Computer Science Engineering",
+			"title": "Computer Engineering",
 			"institution": "University of Castilla-La Mancha",
-			"description": "Studies in Computer Science Engineering (bilingual program), acquiring skills in software development, algorithms, and systems."
+			"description": "Computer Engineering studies (bilingual modality), acquiring knowledge in software development, algorithms, and systems"
 		},
 		{
 			"date": "Sept 2018 - Jan 2022",
 			"title": "Medicine",
 			"institution": "University of Castilla-La Mancha",
-			"description": "Medical studies providing a multidisciplinary perspective."
+			"description": "Studies in Medicine, providing a multidisciplinary perspective"
 		},
 		{
 			"date": "Sept 2016 - May 2018",
-			"title": "High School Diploma in Science",
+			"title": "Science High School",
 			"institution": "Health Sciences and Technology",
-			"description": "Education in sciences."
+			"description": "Scientific training"
 		}
 	],
 	"experience": {
-		"readMore": "Read more",
+		"readMore": "Learn more",
 		"items": [
 			{
 				"date": "June 2021 - March 2022",
 				"title": "Cryptocurrency Mining Project",
 				"company": "Freelance",
-				"description": "Managed and operated an Ethereum mining system using HiveOS. Monitored, optimized, and troubleshot incidents.",
+				"description": "Management and operation of an Ethereum mining system using HiveOS. Monitoring, optimization, and troubleshooting.",
 				"link": ""
 			},
 			{
@@ -77,8 +77,22 @@
 			}
 		]
 	},
+	"projects": {
+		"myCloudDocs": {
+			"title": "myCloudDocs",
+			"description": "Repository where I keep the documentation of various projects I've built using AWS services"
+		},
+		"eterna": {
+			"title": "Eterna",
+			"description": "E-commerce platform for selling watches, developed with Next.js, MongoDB, and Tailwind CSS, featuring a secure REST API with JWT authentication"
+		},
+		"deviceManagementApp": {
+			"title": "Device Management App",
+			"description": "Full Stack application developed by a team using agile methodologies (Scrum), C#, Blazor, and SQLite. It implements unit tests with xUnit and automated CI/CD pipelines in Azure DevOps for continuous deployments"
+		}
+	},
 	"footer": {
-		"text": "© {year} <strong>Lucian Andrei Negoita</strong>. Inspired by <a href=\"https://midu.dev/\" target=\"_blank\" class=\"hover:underline\">midudev's</a> project.",
+		"text": "© {year} <strong>Lucian Andrei Negoita</strong>. Inspired by <a href=\"https://midu.dev/\" target=\"_blank\" class=\"hover:underline\">midudev</a> project.",
 		"sobreMi": "About Me",
 		"contacto": "Contact"
 	}

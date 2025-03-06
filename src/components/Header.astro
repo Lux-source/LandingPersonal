@@ -1,11 +1,15 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
 import LanguageToggle from "./LanguageToggle.astro";
+import translationsES from "../../local/es.json";
+import translationsEN from "../../local/en.json";
 
+// Definimos los enlaces con su "label" (la clave en el JSON)
+// y su url correspondiente.
 const navItems = [
 	{ title: "Experiencia", label: "experiencia", url: "/#experiencia" },
 	{ title: "Proyectos", label: "proyectos", url: "/#proyectos" },
-	{ title: "Sobre mí", label: "sobre-mi", url: "/#sobre-mi" },
+	{ title: "Sobre mí", label: "sobreMi", url: "/#sobre-mi" },
 	{
 		title: "Contacto",
 		label: "contacto",
@@ -13,7 +17,11 @@ const navItems = [
 	},
 ];
 
-const { lang } = Astro.props;
+// Recibimos el idioma (lang). Por defecto, "es" si no llega ningún valor.
+const { lang = "es" } = Astro.props;
+
+// Cargamos las traducciones según el idioma que tengamos en 'lang'.
+const t = lang === "en" ? translationsEN : translationsES;
 ---
 
 <header
@@ -29,7 +37,7 @@ const { lang } = Astro.props;
 					aria-label={link.label}
 					href={link.url}
 				>
-					{link.title}
+					{t.header.nav[link.label]}
 				</a>
 			))
 		}

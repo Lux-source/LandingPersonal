@@ -9,16 +9,16 @@
 	},
 	"hero": {
 		"intro": "Hola, soy Lucian Andrei Negoita",
-		"description": "Estudiante de Ingeniería Informática con fuerte interés en <strong>Arquitectura Cloud, DevOps y Full Stack Development</strong>.",
+		"description": "Estudiante de Ingeniería Informática con fuerte interés en <strong>Arquitectura Cloud, DevOps y Desarrollo Full Stack</strong>.",
 		"badge": "Disponible para trabajar",
 		"contactMe": "Contáctame",
 		"linkedin": "LinkedIn"
 	},
 	"aboutMe": {
-		"role": "Arquitectura Cloud | DevOps | Full Stack Development",
-		"description": "Estudiante de Ingeniería Informática con fuerte interés en Cloud Computing, DevOps y Full Stack Development. Tengo experiencia diseñando e implementando soluciones en AWS, automatización y CI/CD, trabajando en equipos ágiles.",
-		"p1": "Me llamo <strong>Lucian Andrei Negoita</strong>. Actualmente curso Ingeniería Informática. Mi enfoque se centra en Computación en la Nube, DevOps y Desarrollo Full Stack.",
-		"p2": "Diseñar la Arquitectura de aplicaciones complejas es super interesante no se que poner...",
+		"role": "Arquitectura Cloud | DevOps | Desarrollo Full Stack",
+		"description": "Estudiante de Ingeniería Informática con fuerte interés en Cloud Computing, DevOps y Desarrollo Full Stack. Tengo experiencia diseñando e implementando soluciones en AWS, automatización y CI/CD, trabajando en equipos ágiles.",
+		"p1": "Mi nombre es <strong>Lucian Andrei Negoita</strong>. Actualmente estoy cursando Ingeniería Informática. Mi enfoque está en Cloud Computing, DevOps y Desarrollo Full Stack.",
+		"p2": "Diseñar la arquitectura de aplicaciones complejas es súper interesante, no sé qué escribir aquí...",
 		"contactLabel": "Contacto:",
 		"telLabel": "Tel:",
 		"tel": "(+34) 671 901 629",
@@ -30,7 +30,7 @@
 			"date": "Febrero 2025 - Junio 2026",
 			"title": "Curso Universitario de Formación Avanzada en Herramientas Digitales Aplicadas al Transporte y la Logística",
 			"institution": "Universidad de Castilla-La Mancha",
-			"description": "Curso enfocado en tecnologías emergentes y metodologías ágiles aplicadas a logística y transporte, destacando gestión de proyectos Agile (Scrum, Kanban), Cloud computing (AWS, Lambda, EC2, S3), IA, Big Data, Blockchain, robótica y ciberseguridad"
+			"description": "Curso enfocado en tecnologías emergentes y metodologías ágiles aplicadas a la logística y al transporte, destacando gestión ágil de proyectos (Scrum, Kanban), Cloud Computing (AWS, Lambda, EC2, S3), IA, Big Data, Blockchain, robótica y ciberseguridad"
 		},
 		{
 			"date": "Sept 2022 - Feb 2026",
@@ -42,13 +42,13 @@
 			"date": "Sept 2018 - Ene 2022",
 			"title": "Medicina",
 			"institution": "Universidad de Castilla-La Mancha",
-			"description": "Estudios en Medicina, que aportan una perspectiva multidisciplinaria"
+			"description": "Estudios en Medicina, proporcionando una perspectiva multidisciplinar"
 		},
 		{
-			"date": "Sept 2016 - May 2018",
+			"date": "Sept 2016 - Mayo 2018",
 			"title": "Bachillerato de Ciencias",
-			"institution": "Ciencias de la Salud y Tecnológía",
-			"description": "Formación en ciencias"
+			"institution": "Ciencias de la Salud y Tecnología",
+			"description": "Formación científica"
 		}
 	],
 	"experience": {
@@ -56,26 +56,40 @@
 		"items": [
 			{
 				"date": "Junio 2021 - Marzo 2022",
-				"title": "Cryptocurrency Mining Project",
+				"title": "Proyecto de Minería de Criptomonedas",
 				"company": "Freelance",
-				"description": "Gestión y operación de un sistema de minería de Ethereum mediante HiveOS. Monitoreo, optimización y resolución de incidencias.",
+				"description": "Gestión y operación de un sistema de minería de Ethereum usando HiveOS. Monitoreo, optimización y resolución de problemas.",
 				"link": ""
 			},
 			{
 				"date": "Febrero 2024 - Mayo 2024",
-				"title": "AWS Serverless Data Processing Pipeline",
+				"title": "Pipeline Serverless para Procesamiento de Datos en AWS",
 				"company": "Proyecto Personal",
-				"description": "Diseñé e implementé una pipeline en AWS usando S3, DynamoDB y Lambda para análisis en tiempo real de datos en e-commerce.",
+				"description": "Diseñé e implementé una pipeline en AWS usando S3, DynamoDB y Lambda para análisis de datos en tiempo real en comercio electrónico.",
 				"link": ""
 			},
 			{
 				"date": "Septiembre 2024 - Diciembre 2024",
-				"title": "Web-based E-commerce for Watches",
+				"title": "E-commerce Web para Venta de Relojes",
 				"company": "Proyecto Académico",
-				"description": "Desarrollé una plataforma de e-commerce con Next.js, MongoDB y Tailwind CSS, incluyendo una REST API segura con autenticación JWT.",
+				"description": "Desarrollé una plataforma de comercio electrónico con Next.js, MongoDB y Tailwind CSS, incluyendo una API REST segura con autenticación JWT.",
 				"link": ""
 			}
 		]
+	},
+	"projects": {
+		"myCloudDocs": {
+			"title": "myCloudDocs",
+			"description": "Repositorio donde guardo la documentación de varios proyectos que he construido utilizando servicios de AWS"
+		},
+		"eterna": {
+			"title": "Eterna",
+			"description": "Plataforma de comercio electrónico para venta de relojes, desarrollada con Next.js, MongoDB y Tailwind CSS, incluyendo una API REST segura con autenticación JWT"
+		},
+		"deviceManagementApp": {
+			"title": "Aplicación para Gestión de Dispositivos",
+			"description": "Aplicación Full Stack desarrollada en equipo con metodologías ágiles (Scrum), C#, Blazor y SQLite. Implementa pruebas unitarias con xUnit y pipelines automatizados de CI/CD en Azure DevOps para despliegues continuos"
+		}
 	},
 	"footer": {
 		"text": "© {year} <strong>Lucian Andrei Negoita</strong>. Inspirado en el proyecto de <a href=\"https://midu.dev/\" target=\"_blank\" class=\"hover:underline\">midudev</a>.",

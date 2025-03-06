@@ -1,9 +1,20 @@
 ---
-const personalImageAlt = "Lucian Andrei Negoita";
 import Badge from "@/components/Badge.astro";
 import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 import SocialPill from "@/components/SocialPill.astro";
+
+import translationsES from "../../local/es.json";
+import translationsEN from "../../local/en.json";
+
+// Valor por defecto para 'lang' es "es", pero si lo llamas con <Hero lang="en" /> usará inglés
+const { lang = "es" } = Astro.props;
+
+// Selecciona el JSON según el idioma
+const t = lang === "en" ? translationsEN : translationsES;
+
+// Imagen alt
+const personalImageAlt = "Lucian Andrei Negoita";
 ---
 
 <div class="max-w-xl">
@@ -19,28 +30,26 @@ import SocialPill from "@/components/SocialPill.astro";
 			rel="noopener"
 			class="flex items-center transition md:justify-center md:hover:scale-105"
 		>
-			<Badge>Disponible para trabajar</Badge>
+			<Badge>{t.hero.badge}</Badge>
 		</a>
 	</div>
 	<h1
 		class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
 	>
-		Hola, soy Lucian Andrei Negoita
+		{t.hero.intro}
 	</h1>
-	<p class="mt-6 text-xl text-gray-800 dark:text-gray-300">
-		Estudiante de Ingeniería Informática con fuerte interés en <strong
-			class="text-yellow-500 font-semibold"
-			>Arquitectura Cloud, DevOps y Full Stack Development
-		</strong>.
-	</p>
+	<p
+		class="mt-6 text-xl text-gray-800 dark:text-gray-300"
+		set:html={t.hero.description}
+	/>
 	<nav class="flex flex-wrap gap-4 mt-8">
 		<SocialPill href="mailto:negoitalucianandrei@gmail.com">
 			<MailIcon class="w-5 h-5" />
-			Contáctame
+			{t.hero.contactMe}
 		</SocialPill>
 		<SocialPill href="https://linkedin.com/in/lucian-andrei-negoita">
 			<LinkedInIcon class="w-5 h-5" />
-			LinkedIn
+			{t.hero.linkedin}
 		</SocialPill>
 	</nav>
 </div>
