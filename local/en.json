@@ -8,25 +8,77 @@
 		}
 	},
 	"hero": {
-		"intro": "Hello, I'm Lucian Andrei Negoita",
+		"intro": "Hi, I'm Lucian Andrei Negoita",
 		"description": "Computer Science student with a strong interest in <strong>Cloud Architecture, DevOps, and Full Stack Development</strong>.",
-		"badge": "Available for Work",
+		"badge": "Available for work",
 		"contactMe": "Contact Me",
 		"linkedin": "LinkedIn"
 	},
 	"aboutMe": {
 		"role": "Cloud Architecture | DevOps | Full Stack Development",
 		"description": "Computer Science student with a strong interest in Cloud Computing, DevOps, and Full Stack Development. I have experience designing and implementing AWS solutions, automation, and CI/CD, working in agile teams.",
-		"p1": "My name is <strong>Lucian Andrei Negoita</strong>. I'm currently studying Computer Engineering. My focus is on Cloud Computing, DevOps, and Full Stack Development.",
-		"p2": "Designing the architecture of complex applications is super interesting, I don't know what else to say...",
+		"p1": "My name is <strong>Lucian Andrei Negoita</strong>. I'm currently studying Computer Science, focusing on Cloud Computing, DevOps, and Full Stack Development.",
+		"p2": "Designing the architecture of complex applications is very interesting. (to be completed...)",
 		"contactLabel": "Contact:",
 		"telLabel": "Phone:",
 		"tel": "(+34) 671 901 629",
 		"linkedin": "LinkedIn",
 		"github": "GitHub"
 	},
+	"education": [
+		{
+			"date": "February 2025 - June 2026",
+			"title": "Advanced University Course in Digital Tools Applied to Transportation and Logistics",
+			"institution": "University of Castilla-La Mancha",
+			"description": "Course focused on emerging technologies and agile methodologies applied to logistics and transportation, emphasizing Agile project management (Scrum, Kanban), Cloud computing (AWS, Lambda, EC2, S3), AI, Big Data, Blockchain, robotics, and cybersecurity."
+		},
+		{
+			"date": "Sept 2022 - Feb 2026",
+			"title": "Computer Science Engineering",
+			"institution": "University of Castilla-La Mancha",
+			"description": "Studies in Computer Science Engineering (bilingual program), acquiring skills in software development, algorithms, and systems."
+		},
+		{
+			"date": "Sept 2018 - Jan 2022",
+			"title": "Medicine",
+			"institution": "University of Castilla-La Mancha",
+			"description": "Medical studies providing a multidisciplinary perspective."
+		},
+		{
+			"date": "Sept 2016 - May 2018",
+			"title": "High School Diploma in Science",
+			"institution": "Health Sciences and Technology",
+			"description": "Education in sciences."
+		}
+	],
+	"experience": {
+		"readMore": "Read more",
+		"items": [
+			{
+				"date": "June 2021 - March 2022",
+				"title": "Cryptocurrency Mining Project",
+				"company": "Freelance",
+				"description": "Managed and operated an Ethereum mining system using HiveOS. Monitored, optimized, and troubleshot incidents.",
+				"link": ""
+			},
+			{
+				"date": "February 2024 - May 2024",
+				"title": "AWS Serverless Data Processing Pipeline",
+				"company": "Personal Project",
+				"description": "Designed and implemented a pipeline on AWS using S3, DynamoDB, and Lambda for real-time data analysis in e-commerce.",
+				"link": ""
+			},
+			{
+				"date": "September 2024 - December 2024",
+				"title": "Web-based E-commerce for Watches",
+				"company": "Academic Project",
+				"description": "Developed an e-commerce platform with Next.js, MongoDB, and Tailwind CSS, including a secure REST API with JWT authentication.",
+				"link": ""
+			}
+		]
+	},
 	"footer": {
-		"text": "© {year} <strong>Lucian Andrei Negoita</strong>. Inspired by the <a href=\"https://midu.dev/\" target=\"_blank\" class=\"hover:underline\">midudev</a> project.",
+		"text": "© {year} <strong>Lucian Andrei Negoita</strong>. Inspired by <a href=\"https://midu.dev/\" target=\"_blank\" class=\"hover:underline\">midudev's</a> project.",
 		"sobreMi": "About Me",
 		"contacto": "Contact"
 	}

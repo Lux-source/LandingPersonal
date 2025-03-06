@@ -25,6 +25,58 @@
 		"linkedin": "LinkedIn",
 		"github": "GitHub"
 	},
+	"education": [
+		{
+			"date": "Febrero 2025 - Junio 2026",
+			"title": "Curso Universitario de Formación Avanzada en Herramientas Digitales Aplicadas al Transporte y la Logística",
+			"institution": "Universidad de Castilla-La Mancha",
+			"description": "Curso enfocado en tecnologías emergentes y metodologías ágiles aplicadas a logística y transporte, destacando gestión de proyectos Agile (Scrum, Kanban), Cloud computing (AWS, Lambda, EC2, S3), IA, Big Data, Blockchain, robótica y ciberseguridad"
+		},
+		{
+			"date": "Sept 2022 - Feb 2026",
+			"title": "Ingeniería Informática",
+			"institution": "Universidad de Castilla-La Mancha",
+			"description": "Estudios en Ingeniería Informática (modalidad bilingüe), adquiriendo conocimientos en desarrollo de software, algoritmos y sistemas"
+		},
+		{
+			"date": "Sept 2018 - Ene 2022",
+			"title": "Medicina",
+			"institution": "Universidad de Castilla-La Mancha",
+			"description": "Estudios en Medicina, que aportan una perspectiva multidisciplinaria"
+		},
+		{
+			"date": "Sept 2016 - May 2018",
+			"title": "Bachillerato de Ciencias",
+			"institution": "Ciencias de la Salud y Tecnológía",
+			"description": "Formación en ciencias"
+		}
+	],
+	"experience": {
+		"readMore": "Saber más",
+		"items": [
+			{
+				"date": "Junio 2021 - Marzo 2022",
+				"title": "Cryptocurrency Mining Project",
+				"company": "Freelance",
+				"description": "Gestión y operación de un sistema de minería de Ethereum mediante HiveOS. Monitoreo, optimización y resolución de incidencias.",
+				"link": ""
+			},
+			{
+				"date": "Febrero 2024 - Mayo 2024",
+				"title": "AWS Serverless Data Processing Pipeline",
+				"company": "Proyecto Personal",
+				"description": "Diseñé e implementé una pipeline en AWS usando S3, DynamoDB y Lambda para análisis en tiempo real de datos en e-commerce.",
+				"link": ""
+			},
+			{
+				"date": "Septiembre 2024 - Diciembre 2024",
+				"title": "Web-based E-commerce for Watches",
+				"company": "Proyecto Académico",
+				"description": "Desarrollé una plataforma de e-commerce con Next.js, MongoDB y Tailwind CSS, incluyendo una REST API segura con autenticación JWT.",
+				"link": ""
+			}
+		]
+	},
 	"footer": {
 		"text": "© {year} <strong>Lucian Andrei Negoita</strong>. Inspirado en el proyecto de <a href=\"https://midu.dev/\" target=\"_blank\" class=\"hover:underline\">midudev</a>.",
 		"sobreMi": "Sobre mí",

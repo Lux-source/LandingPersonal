@@ -12,6 +12,8 @@ const navItems = [
 		url: "mailto:negoitalucianandrei@gmail.com",
 	},
 ];
+
+const { lang } = Astro.props;
 ---
 
 <header
@@ -32,6 +34,6 @@ const navItems = [
 			))
 		}
 		<ThemeToggle />
-		<LanguageToggle />
+		<LanguageToggle lang={lang} />
 	</nav>
 </header>

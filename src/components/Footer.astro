@@ -1,5 +1,8 @@
 ---
+import { t } from "../utils/i18n.js";
 const currentYear = new Date().getFullYear();
+const { lang } = Astro.props;
+const footerText = t(lang, "footer.text").replace("{year}", currentYear);
 ---
 
 <footer
@@ -8,24 +11,23 @@ const currentYear = new Date().getFullYear();
 	<div
 		class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"
 	>
-		<span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90">
-			© {currentYear}
-			<strong>Lucian Andrei Negoita</strong>. Inspirado en el proyecto de
-			<a href="https://midu.dev/" class="hover:underline" target="_blank"
-				>midudev</a
-			>.
-		</span>
+		<span
+			class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
+			set:html={footerText}
+		/>
 		<ul
 			class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
 		>
 			<li>
-				<a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+				<a href="/#sobre-mi" class="hover:underline me-4 md:me-6"
+					>{t(lang, "footer.sobreMi")}</a
+				>
 			</li>
 			<li>
 				<a
 					id="contacto"
 					href="mailto:negoitalucianandrei@gmail.com"
-					class="hover:underline">Contacto</a
+					class="hover:underline">{t(lang, "footer.contacto")}</a
 				>
 			</li>
 		</ul>

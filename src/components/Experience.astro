@@ -1,38 +1,15 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCE = [
-	{
-		date: "Junio 2021 - Marzo 2022",
-		title: "Cryptocurrency Mining Project",
-		company: "Freelance",
-		description:
-			"Gestión y operación de un sistema de minería de Ethereum mediante HiveOS. Monitoreo, optimización y resolución de incidencias.",
-		link: "",
-	},
-	{
-		date: "Febrero 2024 - Mayo 2024",
-		title: "AWS Serverless Data Processing Pipeline",
-		company: "Proyecto Personal",
-		description:
-			"Diseñé e implementé una pipeline en AWS usando S3, DynamoDB y Lambda para análisis en tiempo real de datos en e-commerce.",
-		link: "",
-	},
-	{
-		date: "Septiembre 2024 - Diciembre 2024",
-		title: "Web-based E-commerce for Watches",
-		company: "Proyecto Académico",
-		description:
-			"Desarrollé una plataforma de e-commerce con Next.js, MongoDB y Tailwind CSS, incluyendo una REST API segura con autenticación JWT.",
-		link: "",
-	},
-];
+import { t } from "../utils/i18n.js";
+const { lang } = Astro.props;
+const EXPERIENCE = t(lang, "experience.items");
 ---
 
 <ol class="relative mt-16">
 	{
-		EXPERIENCE.map((experience) => (
+		EXPERIENCE.map((exp) => (
 			<li>
-				<ExperienceItem {...experience} />
+				<ExperienceItem {...exp} lang={lang} />
 			</li>
 		))
 	}
