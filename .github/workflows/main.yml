@@ -1,23 +1,30 @@
 name: Build and Deploy
+
 on:
   push:
     branches: [main]
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 20.11.1
+          node-version: 20
 
-      - name: Install dependencies
-        run: npm install
+      # (Opcional) Fuerza la actualización de Astro y Tailwind a las últimas versiones
+      - name: Update Astro and Tailwind
+        run: |
+          npm install --save-dev astro@latest @astrojs/tailwind@latest
+          # Reinstala todo con las versiones actualizadas
+          npm install
 
       - name: Build
         run: npm run build
