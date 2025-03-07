@@ -7,7 +7,7 @@ const EXPERIENCE = t(lang, "experience.items");
 
 <ol class="relative mt-16">
 	{
-		EXPERIENCE.map((exp) => (
+		EXPERIENCE.map((exp: any) => (
 			<li>
 				<ExperienceItem {...exp} lang={lang} />
 			</li>

@@ -16,9 +16,14 @@ import translationsEN from "../../local/en.json";
 // Definimos el idioma por defecto (es). Si llamas <Projects lang="en" />, se usará el en.json
 const { lang = "es" } = Astro.props;
 const t = lang === "en" ? translationsEN : translationsES;
+interface Tag {
+	name: string;
+	class: string;
+	icon?: any;
+}
 
 // Mantenemos las etiquetas tal cual
-const TAGS = {
+const TAGS: Record<string, Tag> = {
 	AWS: {
 		name: "AWS",
 		class: "bg-orange-500 text-white",

@@ -4,15 +4,18 @@ import LanguageToggle from "./LanguageToggle.astro";
 import translationsES from "../../local/es.json";
 import translationsEN from "../../local/en.json";
 
-const navItems = [
+type NavLabel =
+	| "experiencia"
+	| "proyectos"
+	| "education"
+	| "sobreMi"
+	| "contacto";
+
+const navItems: { title: string; label: NavLabel; url: string }[] = [
 	{ title: "Proyectos", label: "proyectos", url: "#projects" },
 	{ title: "Formación", label: "education", url: "#education" },
 	{ title: "Sobre mí", label: "sobreMi", url: "#aboutMe" },
-	{
-		title: "Contacto",
-		label: "contacto",
-		url: "mailto:negoitalucianandrei@gmail.com",
-	},
+	{ title: "Contacto", label: "contacto", url: "mailto:..." },
 ];
 
 const { lang = "es" } = Astro.props;
