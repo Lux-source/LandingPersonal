@@ -8,6 +8,8 @@ import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import TitleSection from "@/components/TitleSection.astro";
+
+const lang = "es";
 ---
 
 <Layout
@@ -37,7 +39,7 @@ import TitleSection from "@/components/TitleSection.astro";
 					<ProfileCheck class="w-8 h-8" />
 					Sobre mí
 				</TitleSection>
-				<AboutMe />
+				<AboutMe lang={lang} />
 			</SectionContainer>
 		</div>
 	</main>
