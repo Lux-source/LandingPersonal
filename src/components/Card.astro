@@ -7,8 +7,11 @@ interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
+<li class="link-card w-full">
+	<a
+		href={href}
+		class="block rounded-lg shadow-md p-4 transition hover:scale-105"
+	>
 		<h2>
 			{title}
 			<span>&rarr;</span>
