@@ -26,7 +26,15 @@ const { description, title, lang = "es" } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
-	</head>
+		<script is:inline>
+			document.addEventListener("astro:after-swap", () => {
+				document.documentElement.setAttribute("lang", "{lang}");
+			});
+			// Además, actualízalo al cargar la página
+			document.documentElement.setAttribute("lang", "{lang}");
+		</script></head
+	>
+
 	<body class="relative text-black dark:text-white">
 		<div
 			class="absolute inset-0 z-[-2] min-h-screen w-full
