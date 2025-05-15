@@ -22,55 +22,49 @@
 		"p2": "I have led and collaborated on various technical projects, including scalable web application development, advanced data analysis and filtering, as well as the design and implementation of search algorithms and artificial intelligence techniques. My professional focus revolves around Cloud Architecture, DevOps practices, and Full Stack Development.",
 		"contactLabel": "Contact:",
 		"telLabel": "Tel:",
-		"tel": "(+34) 671 901 629",
+		"tel": "+34 671 901 629",
 		"linkedin": "LinkedIn",
 		"github": "GitHub"
 	},
 	"education": [
 		{
-			"date": "February 2025 - June 2025",
+			"date": "Feb 2025 - Jun 2025",
 			"title": "Advanced University Course in Digital Tools Applied to Transportation and Logistics",
-			"institution": "University of Castilla-La Mancha",
+			"institution": "Universidad de Castilla-La Mancha",
 			"description": "A course focused on emerging technologies and agile methodologies applied to logistics and transportation, highlighting Agile project management (Scrum, Kanban), Cloud computing (AWS, Lambda, EC2, S3), AI, Big Data, Blockchain, robotics, and cybersecurity"
 		},
 		{
-			"date": "Sept 2022 - Feb 2026",
+			"date": "Sep 2022 - Feb 2026",
 			"title": "Computer Engineering",
-			"institution": "University of Castilla-La Mancha",
+			"institution": "Universidad de Castilla-La Mancha",
 			"description": "Computer Engineering studies (bilingual modality), acquiring knowledge in software development, algorithms, and systems"
 		},
 		{
-			"date": "Sept 2018 - Jan 2022",
-			"title": "Medicine",
-			"institution": "University of Castilla-La Mancha",
-			"description": "Studies in Medicine, providing a multidisciplinary perspective"
-		},
-		{
-			"date": "Sept 2016 - May 2018",
-			"title": "Science High School",
-			"institution": "Health Sciences and Technology",
-			"description": "Scientific training"
+			"date": "Sep 2018 - Jan 2022",
+			"title": "Undergraduate Degree Programme in Medicine",
+			"institution": "Universidad de Castilla-La Mancha",
+			"description": "Studies in Medicine, providing a multidisciplinary perspective (unfinished)"
 		}
 	],
 	"experience": {
 		"readMore": "Learn more",
 		"items": [
 			{
-				"date": "June 2021 - March 2022",
+				"date": "Jun 2021 - Mar 2022",
 				"title": "Cryptocurrency Mining Project",
 				"company": "Freelance",
 				"description": "Management and operation of an Ethereum mining system using HiveOS. Monitoring, optimization, and troubleshooting.",
 				"link": ""
 			},
 			{
-				"date": "February 2024 - May 2024",
+				"date": "Feb 2024 - May 2024",
 				"title": "AWS Serverless Data Processing Pipeline",
 				"company": "Personal Project",
 				"description": "Designed and implemented a pipeline on AWS using S3, DynamoDB, and Lambda for real-time data analysis in e-commerce.",
 				"link": ""
 			},
 			{
-				"date": "September 2024 - December 2024",
+				"date": "Sep 2024 - Dec 2024",
 				"title": "Web-based E-commerce for Watches",
 				"company": "Academic Project",
 				"description": "Developed an e-commerce platform with Next.js, MongoDB, and Tailwind CSS, including a secure REST API with JWT authentication.",
