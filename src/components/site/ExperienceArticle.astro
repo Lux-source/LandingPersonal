@@ -1,0 +1,268 @@
+---
+import Icon from "./Icon.astro";
+import Squiggle from "./Squiggle.astro";
+import { getContent, homePath, experiencePath } from "@/i18n";
+import type { Lang, Experience } from "@/i18n";
+
+interface Props {
+	lang: Lang;
+	job: Experience;
+	prev?: Experience;
+	next?: Experience;
+}
+
+const { lang, job, prev, next } = Astro.props;
+const t = getContent(lang);
+
+const DUTY_TONE = ["bg-terracotta text-white", "bg-mustard text-ink", "bg-olive text-white"];
+const FLOW_TONE = [
+	"bg-cream-100 text-ink dark:bg-night-raised dark:text-cream",
+	"bg-cream-100 text-ink dark:bg-night-raised dark:text-cream",
+	"bg-terracotta text-white",
+	"bg-olive text-white",
+];
+const DOT = ["bg-terracotta", "bg-mustard", "bg-olive"];
+---
+
+<article class="mx-auto max-w-[1280px] px-5 pb-4 sm:px-8 lg:px-16">
+	<a
+		href={`${homePath(lang)}#work`}
+		class="inline-flex min-h-[44px] items-center gap-2 text-[15px] font-semibold text-muted transition-colors hover:text-terracotta dark:text-cream/70"
+	>
+		<Icon name="arrow-left" class="h-[17px] w-[17px]" strokeWidth={2.2} />
+		{t.work.backToList}
+	</a>
+
+	<!-- header -->
+	<div class="mt-4 flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-12">
+		<header class="flex min-w-0 flex-1 flex-col gap-4">
+			<div class="flex flex-wrap items-center gap-3">
+				{
+					job.badge && (
+						<span class="rounded-full bg-olive px-3.5 py-1.5 text-[11.5px] font-bold uppercase tracking-wider text-cream">
+							{job.badge}
+						</span>
+					)
+				}
+				<span
+					class:list={[
+						"text-[15px] text-faint",
+						job.datesLong.startsWith("[") && "text-placeholder",
+					]}>{job.datesLong} · {job.location}</span
+				>
+			</div>
+			<h1 class="font-display text-[44px] leading-[1.02] tracking-tight lg:text-[64px]">
+				{job.company}
+			</h1>
+			<p class="text-lg font-bold text-terracotta lg:text-[22px] dark:text-terracotta-light">
+				{job.role}
+			</p>
+			<Squiggle class="w-[170px] lg:w-[200px]" />
+		</header>
+
+		<aside
+			class="flex w-full flex-col gap-4 rounded-[22px] border border-line bg-white p-6 lg:w-[340px] lg:shrink-0 dark:border-night-line dark:bg-night-surface"
+		>
+			<span class="text-[11.5px] font-bold uppercase tracking-[0.1em] text-faint"
+				>{t.work.clientLabel}</span
+			>
+			<h2 class="font-display text-[27px] leading-tight tracking-tight lg:text-3xl">
+				{job.client.name}
+			</h2>
+			<p class="text-[15px] leading-relaxed text-muted dark:text-cream/75">{job.client.body}</p>
+			<div class="h-px bg-line dark:bg-night-line"></div>
+			<ul class="flex flex-col gap-2.5">
+				{
+					job.client.facts.map((fact, index) => (
+						<li class="flex items-center gap-2.5">
+							<span
+								class={`h-[7px] w-[7px] shrink-0 rounded-full ${DOT[index % DOT.length]}`}
+								aria-hidden="true"
+							/>
+							<span
+								class:list={[
+									"text-[14.5px] text-muted dark:text-cream/75",
+									fact.startsWith("[") && "text-placeholder",
+								]}
+							>
+								{fact}
+							</span>
+						</li>
+					))
+				}
+			</ul>
+		</aside>
+	</div>
+
+	<!-- the job in one line -->
+	<p
+		class="mt-12 max-w-[860px] font-display text-[25px] leading-[1.4] lg:text-[32px]"
+		set:html={job.statement}
+	/>
+
+	<!-- what I do -->
+	<section class="mt-12">
+		<h2 class="mb-6 font-display text-[32px] tracking-tight lg:text-[38px]">{t.work.whatIDo}</h2>
+		<div class="grid gap-4 md:grid-cols-3">
+			{
+				job.duties.map((duty, index) => (
+					<div class="flex flex-col gap-3 rounded-[22px] border border-line bg-white p-6 sm:p-7 dark:border-night-line dark:bg-night-surface">
+						<span
+							class={`flex h-12 w-12 items-center justify-center rounded-[14px] ${DUTY_TONE[index % DUTY_TONE.length]}`}
+						>
+							<Icon name={duty.icon} class="h-6 w-6" strokeWidth={2} />
+						</span>
+						<h3 class="font-display text-[24px] leading-tight tracking-tight">{duty.title}</h3>
+						<p class="text-[15.5px] leading-relaxed text-muted dark:text-cream/75">{duty.body}</p>
+					</div>
+				))
+			}
+		</div>
+	</section>
+
+	<!-- how a decision travels -->
+	{
+		job.flow.length > 0 && (
+			<section class="mt-12 rounded-[26px] border border-line bg-white p-7 sm:p-10 dark:border-night-line dark:bg-night-surface">
+				<div class="mb-6 flex flex-wrap items-baseline gap-3.5">
+					<h2 class="font-display text-[28px] tracking-tight lg:text-[32px]">{t.work.flowTitle}</h2>
+					<span class="text-[15px] text-faint">{t.work.flowSubtitle}</span>
+				</div>
+
+				<ol class="flex flex-col items-stretch gap-2.5 lg:flex-row lg:items-stretch">
+					{job.flow.map((step, index) => (
+						<>
+							<li
+								class={`flex flex-1 flex-col gap-1.5 rounded-2xl p-5 ${FLOW_TONE[index % FLOW_TONE.length]}`}
+							>
+								<span class="text-[11.5px] font-bold uppercase tracking-[0.08em] opacity-70">
+									{String(index + 1).padStart(2, "0")}
+								</span>
+								<span class="text-base font-bold">{step.title}</span>
+								<span class="text-sm leading-relaxed opacity-90">{step.body}</span>
+							</li>
+							{index < job.flow.length - 1 && (
+								<li
+									class="flex shrink-0 items-center justify-center text-line dark:text-night-line"
+									aria-hidden="true"
+								>
+									<Icon
+										name="arrow-right"
+										class="h-6 w-6 rotate-90 text-[#D8C4A8] lg:rotate-0"
+										strokeWidth={2.4}
+									/>
+								</li>
+							)}
+						</>
+					))}
+				</ol>
+			</section>
+		)
+	}
+
+	<!-- highlights + stack -->
+	<div class="mt-12 grid gap-4 lg:grid-cols-[1.15fr_1fr]">
+		<section
+			class="flex flex-col gap-3.5 rounded-[22px] border border-dashed border-[#D8C4A8] bg-white p-7 sm:p-8 dark:bg-night-surface"
+		>
+			<h2 class="font-display text-[26px] tracking-tight lg:text-[28px]">
+				{t.work.highlightsTitle}
+			</h2>
+			<p class="text-[15px] leading-relaxed text-faint">{t.work.highlightsHelp}</p>
+			<ul class="flex flex-col gap-2.5">
+				{
+					job.highlights.map((item) => (
+						<li class="flex items-start gap-3">
+							<span
+								class="mt-2 h-[7px] w-[7px] shrink-0 rounded-full bg-[#D8C4A8]"
+								aria-hidden="true"
+							/>
+							<span
+								class:list={[
+									"text-base leading-relaxed",
+									item.startsWith("[") ? "text-placeholder" : "text-muted dark:text-cream/75",
+								]}
+							>
+								{item}
+							</span>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section
+			class="flex flex-col gap-4 rounded-[22px] bg-ink p-7 text-cream sm:p-8 dark:bg-night-surface"
+		>
+			<h2 class="font-display text-[26px] tracking-tight lg:text-[28px]">{t.work.stackTitle}</h2>
+			<ul class="flex flex-wrap gap-2">
+				{
+					job.stack.map((item) => (
+						<li
+							class:list={[
+								"rounded-full px-4 py-2 text-sm",
+								item.name.startsWith("[")
+									? "border border-dashed border-white/25 font-semibold text-placeholder"
+									: item.featured
+										? "bg-mustard font-bold text-ink"
+										: "border border-white/15 font-semibold text-cream",
+							]}
+						>
+							{item.name}
+						</li>
+					))
+				}
+			</ul>
+		</section>
+	</div>
+
+	<!-- neighbouring roles -->
+	{
+		(prev || next) && (
+			<nav class="mt-12 grid gap-4 md:grid-cols-2" aria-label={t.work.title}>
+				{next && (
+					<a
+						href={experiencePath(lang, next.slug)}
+						class="group flex items-center justify-between gap-6 rounded-[22px] border border-line bg-white p-7 transition-shadow hover:shadow-lg hover:shadow-ink/5 dark:border-night-line dark:bg-night-surface"
+					>
+						<span class="flex min-w-0 flex-col gap-1.5">
+							<span class="text-[11.5px] font-bold uppercase tracking-[0.1em] text-faint">
+								{t.work.prevLabel}
+							</span>
+							<span class="font-display text-[28px] leading-tight tracking-tight lg:text-[32px]">
+								{next.company}
+							</span>
+							<span class="text-[15px] text-muted dark:text-cream/70">
+								{next.role.split("·")[0].trim()} · {next.dates}
+							</span>
+						</span>
+						<span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-terracotta text-white transition-transform group-hover:translate-x-1">
+							<Icon name="arrow-right" class="h-[22px] w-[22px]" strokeWidth={2.4} />
+						</span>
+					</a>
+				)}
+				{prev && (
+					<a
+						href={experiencePath(lang, prev.slug)}
+						class="group flex items-center justify-between gap-6 rounded-[22px] border border-line bg-white p-7 transition-shadow hover:shadow-lg hover:shadow-ink/5 dark:border-night-line dark:bg-night-surface"
+					>
+						<span class="flex min-w-0 flex-col gap-1.5">
+							<span class="text-[11.5px] font-bold uppercase tracking-[0.1em] text-faint">
+								{t.work.nextLabel}
+							</span>
+							<span class="font-display text-[28px] leading-tight tracking-tight lg:text-[32px]">
+								{prev.company}
+							</span>
+							<span class="text-[15px] text-muted dark:text-cream/70">
+								{prev.role.split("·")[0].trim()} · {prev.dates}
+							</span>
+						</span>
+						<span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-olive text-white transition-transform group-hover:translate-x-1">
+							<Icon name="arrow-right" class="h-[22px] w-[22px]" strokeWidth={2.4} />
+						</span>
+					</a>
+				)}
+			</nav>
+		)
+	}
+</article>

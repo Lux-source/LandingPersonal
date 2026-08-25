@@ -1,0 +1,372 @@
+{
+  "meta": {
+    "title": "Lucian Andrei Negoita — Software Engineer",
+    "description": "Backend software engineer in Spain. I design APIs and the boundaries between services. Currently Solutions Architect at Capgemini Invent."
+  },
+  "nav": {
+    "work": "Work",
+    "projects": "Projects",
+    "about": "About",
+    "cv": "My CV",
+    "menu": "Open menu"
+  },
+  "profile": {
+    "name": "Lucian Andrei Negoita",
+    "short": "Lucian",
+    "role": "Software engineer · Backend",
+    "location": "Spain · Remote",
+    "email": "negoitalucianandrei@gmail.com",
+    "phone": "+34 671 901 629",
+    "github": "https://github.com/Lux-source",
+    "linkedin": "https://linkedin.com/in/lucian-andrei-negoita",
+    "cv": "/cv-lucian-negoita.pdf",
+    "photoAlt": "Portrait of Lucian Andrei Negoita"
+  },
+  "hero": {
+    "greeting": "Hola, soy Lucian. I make software behave itself",
+    "lead": "Backend engineer in Spain. I draw the lines between services, then write the code on both sides of them.",
+    "nowLabel": "Right now",
+    "now": "Building APIs at <strong>Capgemini Invent</strong>, for Repsol.",
+    "sayHello": "Say hello",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "work": {
+    "title": "Where I've been",
+    "subtitle": "so far",
+    "readMore": "See the role",
+    "backToList": "Where I've been",
+    "clientLabel": "The client",
+    "whatIDo": "What I do here",
+    "flowTitle": "How a decision travels",
+    "flowSubtitle": "from a request to something running",
+    "highlightsTitle": "Worth naming",
+    "highlightsHelp": "Two or three concrete things from this role — a platform you designed the API for, a decision you argued and won, a number that shows the scale. This is the part a hiring manager reads twice.",
+    "stackTitle": "On this job",
+    "prevLabel": "Before this",
+    "nextLabel": "After this",
+    "ctaTitle": "Want the long version?",
+    "ctaButton": "Ask me anything"
+  },
+  "projects": {
+    "title": "Things I made",
+    "readMore": "See the project",
+    "backToList": "Things I made",
+    "howItWorks": "How it works",
+    "howItWorksSubtitle": "event-driven, end to end",
+    "whyTitle": "Why I built it",
+    "learnedTitle": "What it taught me",
+    "stackTitle": "Built with",
+    "documentedIn": "Documented in",
+    "galleryTitle": "[Screenshot or diagram]",
+    "galleryHelp": "A console screenshot, a CloudWatch graph, or your own architecture drawing. One real image here does more than three paragraphs.",
+    "nextLabel": "Next project",
+    "ctaTitle": "Curious about the code?",
+    "ctaButton": "Ask me about it",
+    "code": "Read the code",
+    "live": "See it live",
+    "docs": "Read the write-up",
+    "source": "Source"
+  },
+  "about": {
+    "title": "A bit about me",
+    "body": "I studied medicine for four years before switching to computer engineering. It turns out both are the same job: reading a system you did not design, and working out what is actually wrong with it.",
+    "chips": ["Based in Spain", "Works remote", "Studied in English"],
+    "skillsTitle": "What I work with",
+    "educationTitle": "Where I studied"
+  },
+  "contact": {
+    "title": "Let's build something",
+    "body": "Write to me. I answer everything, usually the same day.",
+    "cta": "Email me"
+  },
+  "footer": {
+    "rights": "© 2026 Lucian Andrei Negoita",
+    "built": "Built with Astro"
+  },
+  "theme": {
+    "toggle": "Switch theme"
+  },
+  "language": {
+    "switchTo": "View in Spanish",
+    "current": "EN",
+    "other": "ES"
+  },
+  "skills": [
+    { "name": "Java", "featured": true },
+    { "name": "Spring Boot", "featured": true },
+    { "name": "Python", "featured": false },
+    { "name": "TypeScript", "featured": false },
+    { "name": "Angular", "featured": false },
+    { "name": "AWS", "featured": false },
+    { "name": "Linux", "featured": false },
+    { "name": "SQL", "featured": false },
+    { "name": "CI/CD", "featured": false }
+  ],
+  "education": [
+    {
+      "dates": "2022 — 2026",
+      "title": "B.Sc. Computer Engineering, UCLM",
+      "note": ""
+    },
+    {
+      "dates": "2025",
+      "title": "Digital Tools for Transport & Logistics, UCLM",
+      "note": ""
+    },
+    {
+      "dates": "2018 — 2022",
+      "title": "Medicine, UCLM",
+      "note": "(not finished)"
+    }
+  ],
+  "experience": [
+    {
+      "slug": "capgemini-invent",
+      "company": "Capgemini Invent",
+      "role": "Solutions Architect, Development Area",
+      "dates": "Mar 2026 —",
+      "datesLong": "Mar 2026 — present",
+      "location": "Remote, Spain",
+      "badge": "Right now",
+      "accent": "terracotta",
+      "summary": "I design the API boundaries inside Repsol's Development Architecture Service — and write down why each one sits where it does.",
+      "tags": [],
+      "client": {
+        "name": "Repsol",
+        "body": "An IBEX 35 energy multinational. I sit inside their Development Architecture Service.",
+        "facts": [
+          "Employed by Capgemini Invent",
+          "Working for Repsol as end client",
+          "Fully remote from Spain"
+        ]
+      },
+      "statement": "My job is to decide <em>where one service ends and the next begins</em> — and to leave behind a written reason for every line I draw.",
+      "duties": [
+        {
+          "icon": "boundary",
+          "title": "Design the boundary",
+          "body": "REST APIs and service boundaries for corporate platforms: what each service owns, what it exposes, and what it must never know about the others."
+        },
+        {
+          "icon": "document",
+          "title": "Write it down",
+          "body": "Architecture decision records: the options considered, the one chosen, and the reason. So the next engineer inherits an argument, not a mystery."
+        },
+        {
+          "icon": "review",
+          "title": "Review the code",
+          "body": "Peer review against corporate quality and security gates — the point where a design either survives contact with reality or gets revised."
+        }
+      ],
+      "flow": [
+        { "title": "A need arrives", "body": "A team needs data or behaviour that lives somewhere else." },
+        { "title": "Options on the table", "body": "Two or three ways to draw the boundary, each with a cost." },
+        { "title": "The ADR", "body": "One chosen, written down, with the reasoning attached." },
+        { "title": "Review & ship", "body": "Implementation reviewed against quality and security gates." }
+      ],
+      "highlights": [
+        "[Specific 1 — what you designed, and for whom]",
+        "[Specific 2 — a decision and why it went your way]",
+        "[Specific 3 — scale: services, teams, requests, whatever is true]"
+      ],
+      "stack": [
+        { "name": "REST API design", "featured": true },
+        { "name": "Service boundaries", "featured": true },
+        { "name": "ADRs", "featured": false },
+        { "name": "Code review", "featured": false },
+        { "name": "Security gates", "featured": false },
+        { "name": "[Add stack]", "featured": false }
+      ]
+    },
+    {
+      "slug": "tragsatec",
+      "company": "Tragsatec",
+      "role": "Software Engineer, Full-Stack · Internship",
+      "dates": "Jul — Sep 2025",
+      "datesLong": "Jul — Sep 2025",
+      "location": "Albacete, Spain",
+      "badge": "",
+      "accent": "mustard",
+      "summary": "Built Spring Boot and Angular into a government platform the public actually uses, and kept its old JBoss half breathing while I did.",
+      "tags": ["Spring Boot", "Angular", "Python"],
+      "client": {
+        "name": "Public administration",
+        "body": "A public-facing application: real users, real incidents, and a legacy code base underneath.",
+        "facts": [
+          "Three-month internship",
+          "Full-stack team",
+          "On site in Albacete"
+        ]
+      },
+      "statement": "My first contact with software <em>someone actually uses</em> — nothing teaches faster than a production incident.",
+      "duties": [
+        {
+          "icon": "boundary",
+          "title": "Endpoints and schema",
+          "body": "Spring Boot REST endpoints on JPA/Hibernate, with the schema versioned in Liquibase so every change could be walked back."
+        },
+        {
+          "icon": "document",
+          "title": "The interface on top",
+          "body": "Angular and TypeScript screens consuming those endpoints, built for people who do not choose to use the application."
+        },
+        {
+          "icon": "review",
+          "title": "Keeping it standing",
+          "body": "Production troubleshooting on a legacy Java/JBoss code base, plus Python pipelines to migrate data into the new model."
+        }
+      ],
+      "flow": [],
+      "highlights": [
+        "[Specific 1 — which part of the application was yours]",
+        "[Specific 2 — an incident you fixed, and how]",
+        "[Specific 3 — rows migrated, users, whatever is true]"
+      ],
+      "stack": [
+        { "name": "Spring Boot", "featured": true },
+        { "name": "JPA / Hibernate", "featured": true },
+        { "name": "Liquibase", "featured": false },
+        { "name": "Angular", "featured": false },
+        { "name": "TypeScript", "featured": false },
+        { "name": "JBoss", "featured": false },
+        { "name": "Python", "featured": false }
+      ]
+    },
+    {
+      "slug": "freelance",
+      "company": "On my own",
+      "role": "Infrastructure & operations · Freelance",
+      "dates": "[DATES]",
+      "datesLong": "[DATES] · ~4 months",
+      "location": "Spain",
+      "badge": "",
+      "accent": "sand",
+      "summary": "My own Linux servers, from empty box to running service. Nobody else on call at 3 a.m.",
+      "tags": ["Linux"],
+      "client": {
+        "name": "Myself",
+        "body": "No team, no on-call rotation, nobody to escalate to. If it fell over, I was the one who woke up.",
+        "facts": [
+          "Self-employed",
+          "Roughly four months",
+          "[DATES to confirm]"
+        ]
+      },
+      "statement": "Running something alone teaches you one thing reading never does: <em>what breaks first</em>.",
+      "duties": [
+        {
+          "icon": "boundary",
+          "title": "Provision",
+          "body": "Linux servers from scratch: base system, networking, access and hardening."
+        },
+        {
+          "icon": "document",
+          "title": "Deploy",
+          "body": "Getting services running and keeping them reproducible, so a deploy was not an act of faith."
+        },
+        {
+          "icon": "review",
+          "title": "Watch and maintain",
+          "body": "Monitoring, updates, and the boring work that prevents the midnight phone call."
+        }
+      ],
+      "flow": [],
+      "highlights": [
+        "[Specific 1 — what ran on those servers]",
+        "[Specific 2 — the worst incident, and what you changed after]",
+        "[DATES — the exact range]"
+      ],
+      "stack": [
+        { "name": "Linux", "featured": true },
+        { "name": "Provisioning", "featured": false },
+        { "name": "Deployment", "featured": false },
+        { "name": "Monitoring", "featured": false }
+      ]
+    }
+  ],
+  "projectList": [
+    {
+      "slug": "tfg",
+      "title": "[THESIS PROJECT NAME]",
+      "kind": "In production",
+      "kindStyle": "live",
+      "accent": "terracotta",
+      "icon": "orbit",
+      "summary": "My degree project — the rare one that got deployed and kept running. <span class=\"placeholder\">[One line: what it does.]</span>",
+      "tags": [],
+      "links": { "live": "", "code": "", "docs": "" },
+      "lead": "[One longer line: what it does, who uses it, and the number that shows it worked.]",
+      "statement": "",
+      "architecture": [],
+      "why": "[Why you built it, and what real problem it solved.]",
+      "learned": [
+        "[Something it taught you that a class would not have]",
+        "[Something you would do differently today]"
+      ],
+      "stack": [
+        { "name": "[STACK]", "featured": true }
+      ],
+      "docsLabel": "",
+      "docsUrl": ""
+    },
+    {
+      "slug": "plataforma-colaborativa",
+      "title": "Collaborative coding platform",
+      "kind": "University",
+      "kindStyle": "muted",
+      "accent": "mustard",
+      "icon": "code",
+      "summary": "<span class=\"placeholder\">[One line: what it lets people do together, and the hard part.]</span>",
+      "tags": [],
+      "links": { "live": "", "code": "", "docs": "" },
+      "lead": "[What problem it solves, how many people can edit at once, and the genuinely hard part: conflict resolution, presence, or latency.]",
+      "statement": "",
+      "architecture": [],
+      "why": "[Why this project and not another one.]",
+      "learned": [
+        "[The hardest thing about concurrent editing]",
+        "[What you would simplify on a rewrite]"
+      ],
+      "stack": [
+        { "name": "[STACK]", "featured": true }
+      ],
+      "docsLabel": "",
+      "docsUrl": ""
+    },
+    {
+      "slug": "pipeline-serverless",
+      "title": "Serverless data pipeline",
+      "kind": "For fun",
+      "kindStyle": "muted",
+      "accent": "olive",
+      "icon": "cloud",
+      "summary": "Files land in S3, Lambda reshapes them, DynamoDB hands them back — near-real time, no servers to babysit.",
+      "tags": ["AWS Lambda", "S3", "DynamoDB"],
+      "links": { "live": "", "code": "", "docs": "https://github.com/Lux-source/myCloudDocs" },
+      "lead": "Files land in a bucket, code wakes up, reshapes them, and puts them somewhere a dashboard can read in near-real time. Nothing runs when nothing happens.",
+      "statement": "A pipeline with no servers to babysit",
+      "architecture": [
+        { "icon": "bucket", "title": "S3 bucket", "body": "A raw file arrives. That is the only trigger.", "tone": "sand" },
+        { "icon": "bolt", "title": "Lambda", "body": "Validates, reshapes, enriches. Scales to zero between events.", "tone": "terracotta" },
+        { "icon": "database", "title": "DynamoDB", "body": "Written so the read pattern is cheap, not so the writes are pretty.", "tone": "olive" },
+        { "icon": "chart", "title": "Whoever asks", "body": "Near-real-time answers instead of a nightly batch.", "tone": "sand" }
+      ],
+      "why": "I wanted to understand event-driven architecture by paying for it, not by reading about it. A nightly batch job is easy. Something that reacts the moment a file lands, costs nothing while idle, and still behaves when two files arrive at once — that is where the real decisions are.",
+      "learned": [
+        "In DynamoDB you design the table around the question you will ask, not the data you have.",
+        "A retry that is not idempotent is just a slower way to corrupt your data.",
+        "Writing the runbook first made the architecture simpler — anything I could not explain, I removed."
+      ],
+      "stack": [
+        { "name": "AWS Lambda", "featured": true },
+        { "name": "S3", "featured": true },
+        { "name": "DynamoDB", "featured": true },
+        { "name": "Python", "featured": false },
+        { "name": "IAM", "featured": false }
+      ],
+      "docsLabel": "myCloudDocs",
+      "docsUrl": "https://github.com/Lux-source/myCloudDocs"
+    }
+  ]
+}

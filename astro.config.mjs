@@ -5,11 +5,8 @@ import robotsTxt from "astro-robots-txt"
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
-  site: 'https://lucianandreinegoita.dev/es/',
-  vite: {
-    define: {
-      'process.env.LANGUAGES': JSON.stringify(['es', 'en']),
-      'process.env.DEFAULT_LANGUAGE': JSON.stringify('es')
-    }
+  site: 'https://lucianandreinegoita.dev',
+  redirects: {
+    '/': '/es/'
   }
 })

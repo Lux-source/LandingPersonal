@@ -1,0 +1,73 @@
+---
+import { getContent } from "@/i18n";
+import type { Lang } from "@/i18n";
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getContent(lang);
+---
+
+<section
+	id="about"
+	class="mx-auto grid max-w-[1280px] scroll-mt-24 gap-[18px] px-5 pt-16 sm:px-8 lg:grid-cols-[1.1fr_1fr] lg:px-16 lg:pt-20"
+>
+	<div class="flex flex-col gap-4 rounded-[22px] bg-ink p-7 text-cream sm:p-9 dark:bg-night-surface">
+		<h2 class="font-display text-3xl tracking-tight sm:text-[34px]">{t.about.title}</h2>
+		<p class="text-[17px] leading-relaxed text-cream/80">{t.about.body}</p>
+		<ul class="mt-2 flex flex-wrap gap-2">
+			{
+				t.about.chips.map((chip) => (
+					<li class="rounded-full border border-white/15 px-4 py-2 text-[13.5px] font-semibold">
+						{chip}
+					</li>
+				))
+			}
+		</ul>
+	</div>
+
+	<div
+		class="flex flex-col gap-5 rounded-[22px] border border-line bg-white p-7 sm:p-8 dark:border-night-line dark:bg-night-surface"
+	>
+		<div class="flex flex-col gap-3">
+			<h3 class="font-display text-2xl tracking-tight">{t.about.skillsTitle}</h3>
+			<ul class="flex flex-wrap gap-2">
+				{
+					t.skills.map((skill) => (
+						<li
+							class:list={[
+								"rounded-full px-3.5 py-2 text-[13.5px]",
+								skill.featured
+									? "bg-terracotta font-bold text-white"
+									: "bg-cream-100 font-semibold text-muted dark:bg-night-raised dark:text-cream/75",
+							]}
+						>
+							{skill.name}
+						</li>
+					))
+				}
+			</ul>
+		</div>
+
+		<div class="h-px bg-line dark:bg-night-line"></div>
+
+		<div class="flex flex-col gap-3">
+			<h3 class="font-display text-2xl tracking-tight">{t.about.educationTitle}</h3>
+			<ul class="flex flex-col gap-3">
+				{
+					t.education.map((item) => (
+						<li class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-4">
+							<span class="w-[92px] shrink-0 text-[13px] text-faint">{item.dates}</span>
+							<span class="text-[15.5px] font-semibold">
+								{item.title}
+								{item.note && <span class="text-sm font-normal text-faint"> {item.note}</span>}
+							</span>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</section>

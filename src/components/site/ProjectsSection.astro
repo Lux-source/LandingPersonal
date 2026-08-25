@@ -1,0 +1,84 @@
+---
+import Icon from "./Icon.astro";
+import { getContent, projectPath } from "@/i18n";
+import type { Lang } from "@/i18n";
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getContent(lang);
+
+const BLOCK: Record<string, string> = {
+	terracotta: "bg-terracotta text-cream",
+	mustard: "bg-mustard text-ink",
+	olive: "bg-olive text-cream",
+};
+---
+
+<section
+	id="projects"
+	class="mx-auto max-w-[1280px] scroll-mt-24 px-5 pt-16 sm:px-8 lg:px-16 lg:pt-20"
+>
+	<h2 class="mb-7 font-display text-4xl tracking-tight lg:text-[44px]">{t.projects.title}</h2>
+
+	<ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-[18px]">
+		{
+			t.projectList.map((project) => (
+				<li class="flex">
+					<a
+						href={projectPath(lang, project.slug)}
+						class="group flex w-full flex-col overflow-hidden rounded-[22px] border border-line bg-white transition-shadow hover:shadow-lg hover:shadow-ink/5 dark:border-night-line dark:bg-night-surface"
+					>
+						<div
+							class={`flex h-[132px] items-center justify-center ${BLOCK[project.accent] ?? "bg-cream-200 text-ink"}`}
+						>
+							<Icon
+								name={project.icon}
+								class="h-16 w-16 transition-transform duration-500 group-hover:scale-105"
+								strokeWidth={2.2}
+							/>
+						</div>
+
+						<div class="flex flex-1 flex-col gap-3 p-6">
+							<span
+								class:list={[
+									"self-start rounded-full px-3 py-1.5 text-[12px] font-bold uppercase tracking-wide",
+									project.kindStyle === "live"
+										? "-rotate-1 bg-olive text-cream"
+										: "bg-cream-100 text-muted dark:bg-night-raised dark:text-cream/75",
+								]}
+							>
+								{project.kind}
+							</span>
+
+							<h3
+								class:list={[
+									"font-display text-2xl leading-tight tracking-tight",
+									project.title.startsWith("[") && "text-placeholder",
+								]}
+							>
+								{project.title}
+							</h3>
+
+							<p
+								class="flex-1 text-[15px] leading-relaxed text-muted dark:text-cream/75"
+								set:html={project.summary}
+							/>
+
+							<span class="inline-flex items-center gap-2 py-2 text-[15px] font-bold text-terracotta dark:text-terracotta-light">
+								{t.projects.readMore}
+								<Icon
+									name="arrow-right"
+									class="h-4 w-4 transition-transform group-hover:translate-x-1"
+									strokeWidth={2.2}
+								/>
+							</span>
+						</div>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</section>

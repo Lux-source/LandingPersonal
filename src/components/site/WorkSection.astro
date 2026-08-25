@@ -1,0 +1,99 @@
+---
+import Icon from "./Icon.astro";
+import { getContent, experiencePath } from "@/i18n";
+import type { Lang } from "@/i18n";
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getContent(lang);
+
+const DOT: Record<string, string> = {
+	terracotta: "bg-terracotta",
+	mustard: "bg-mustard",
+	olive: "bg-olive",
+	sand: "bg-faint",
+};
+---
+
+<section id="work" class="mx-auto max-w-[1280px] scroll-mt-24 px-5 pt-16 sm:px-8 lg:px-16 lg:pt-20">
+	<div class="mb-8 flex flex-wrap items-baseline gap-4">
+		<h2 class="font-display text-4xl tracking-tight lg:text-[44px]">{t.work.title}</h2>
+		<span class="text-[15px] text-faint">{t.work.subtitle}</span>
+	</div>
+
+	<ul class="flex flex-col gap-4">
+		{
+			t.experience.map((job) => (
+				<li>
+					<a
+						href={experiencePath(lang, job.slug)}
+						class="group flex flex-col gap-5 rounded-[22px] border border-line bg-white p-6 transition-shadow hover:shadow-lg hover:shadow-ink/5 sm:flex-row sm:items-start sm:gap-6 sm:p-7 dark:border-night-line dark:bg-night-surface"
+					>
+						<span
+							class={`mt-2 hidden h-3 w-3 shrink-0 rounded-full sm:block ${DOT[job.accent] ?? "bg-faint"}`}
+							aria-hidden="true"
+						/>
+
+						<div class="flex min-w-0 flex-1 flex-col gap-2">
+							<div class="flex flex-wrap items-center gap-3">
+								<span
+									class={`h-3 w-3 shrink-0 rounded-full sm:hidden ${DOT[job.accent] ?? "bg-faint"}`}
+									aria-hidden="true"
+								/>
+								<h3 class="font-display text-[26px] leading-tight tracking-tight">
+									{job.company}
+								</h3>
+								{job.badge && (
+									<span class="rounded-full bg-olive px-3 py-1.5 text-[11.5px] font-bold uppercase tracking-wider text-cream">
+										{job.badge}
+									</span>
+								)}
+							</div>
+
+							<p class="text-base font-bold text-terracotta dark:text-terracotta-light">
+								{job.role}
+							</p>
+							<p class="max-w-[62ch] text-[15.5px] leading-relaxed text-muted dark:text-cream/75">
+								{job.summary}
+							</p>
+
+							{job.tags.length > 0 && (
+								<ul class="mt-1 flex flex-wrap gap-2">
+									{job.tags.map((tag) => (
+										<li class="rounded-full bg-cream-100 px-3 py-1.5 text-[12.5px] font-semibold text-muted dark:bg-night-raised dark:text-cream/75">
+											{tag}
+										</li>
+									))}
+								</ul>
+							)}
+
+							<span class="mt-2 inline-flex items-center gap-2 text-[15px] font-bold text-terracotta dark:text-terracotta-light">
+								{t.work.readMore}
+								<Icon
+									name="arrow-right"
+									class="h-4 w-4 transition-transform group-hover:translate-x-1"
+									strokeWidth={2.2}
+								/>
+							</span>
+						</div>
+
+						<div class="flex shrink-0 flex-col gap-1 text-left sm:text-right">
+							<span
+								class:list={[
+									"text-sm font-bold",
+									job.dates.startsWith("[") && "text-placeholder",
+								]}
+							>
+								{job.dates}
+							</span>
+							<span class="text-[13px] text-faint">{job.location}</span>
+						</div>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</section>

@@ -1,0 +1,41 @@
+---
+import SiteLayout from "@/layouts/SiteLayout.astro";
+import ProjectArticle from "@/components/site/ProjectArticle.astro";
+import ContactSection from "@/components/site/ContactSection.astro";
+import { getContent, neighbours } from "@/i18n";
+import type { GetStaticPaths } from "astro";
+
+const lang = "es" as const;
+
+export const getStaticPaths = (() => {
+	return getContent("es").projectList.map((project) => ({ params: { slug: project.slug } }));
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+const t = getContent(lang);
+const project = t.projectList.find((item) => item.slug === slug);
+
+if (!project) {
+	return Astro.redirect("/es/");
+}
+
+const { next } = neighbours(t.projectList, project.slug);
+const title = `${project.title} — ${t.profile.name}`;
+const description = project.lead.replace(/\[|\]/g, "");
+---
+
+<SiteLayout
+	lang={lang}
+	page={{ kind: "project", slug: project.slug }}
+	title={title}
+	description={description}
+>
+	<ProjectArticle lang={lang} project={project} next={next} />
+	<ContactSection
+		lang={lang}
+		tone="olive"
+		title={t.projects.ctaTitle}
+		body=""
+		cta={t.projects.ctaButton}
+	/>
+</SiteLayout>

@@ -1,0 +1,259 @@
+---
+import { getContent, homePath, alternatePath, otherLang } from "@/i18n";
+import type { Lang, PageKind } from "@/i18n";
+
+interface Props {
+	lang: Lang;
+	page: PageKind;
+}
+
+const { lang, page } = Astro.props;
+const t = getContent(lang);
+const home = homePath(lang);
+const altHref = alternatePath(lang, page);
+const alt = otherLang(lang);
+
+const links = [
+	{ label: t.nav.work, href: `${home}#work` },
+	{ label: t.nav.projects, href: `${home}#projects` },
+	{ label: t.nav.about, href: `${home}#about` },
+];
+---
+
+<header class="relative z-30">
+	<div
+		class="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-16"
+	>
+		<a href={home} class="-my-1 flex min-h-[44px] shrink-0 items-center gap-3 py-1">
+			<img
+				src="/lucian.webp"
+				alt={t.profile.photoAlt}
+				width="34"
+				height="34"
+				class="h-[34px] w-[34px] rounded-full border-2 border-mustard object-cover"
+			/>
+			<span class="font-display text-lg tracking-tight sm:text-xl">{t.profile.short}</span>
+		</a>
+
+		<!-- desktop -->
+		<nav
+			class="hidden items-center gap-1 rounded-full border border-line bg-white p-[5px] lg:flex dark:border-night-line dark:bg-night-surface"
+			aria-label={t.nav.work}
+		>
+			{
+				links.map((link) => (
+					<a
+						href={link.href}
+						class="rounded-full px-4 py-2 text-sm font-semibold text-muted transition-colors hover:bg-cream-100 hover:text-ink dark:text-cream/70 dark:hover:bg-night-raised dark:hover:text-cream"
+					>
+						{link.label}
+					</a>
+				))
+			}
+			<span class="mx-1 h-5 w-px bg-line dark:bg-night-line"></span>
+			<span
+				class="rounded-full bg-cream-100 px-3 py-2 text-[13px] font-bold text-ink dark:bg-night-raised dark:text-cream"
+				aria-current="true">{t.language.current}</span
+			>
+			<a
+				href={altHref}
+				hreflang={alt}
+				aria-label={t.language.switchTo}
+				class="rounded-full px-3 py-2 text-[13px] font-semibold text-faint transition-colors hover:text-ink dark:hover:text-cream"
+				>{t.language.other}</a
+			>
+			<button
+				type="button"
+				data-theme-toggle
+				aria-label={t.theme.toggle}
+				class="ml-1 flex h-9 w-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-cream-100 hover:text-ink dark:text-cream/70 dark:hover:bg-night-raised dark:hover:text-cream"
+			>
+				<svg
+					class="h-[18px] w-[18px] dark:hidden"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.8"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					aria-hidden="true"
+				>
+					<circle cx="12" cy="12" r="4.2"></circle>
+					<line x1="12" y1="2.5" x2="12" y2="5"></line>
+					<line x1="12" y1="19" x2="12" y2="21.5"></line>
+					<line x1="2.5" y1="12" x2="5" y2="12"></line>
+					<line x1="19" y1="12" x2="21.5" y2="12"></line>
+					<line x1="5.3" y1="5.3" x2="7" y2="7"></line>
+					<line x1="17" y1="17" x2="18.7" y2="18.7"></line>
+					<line x1="18.7" y1="5.3" x2="17" y2="7"></line>
+					<line x1="7" y1="17" x2="5.3" y2="18.7"></line>
+				</svg>
+				<svg
+					class="hidden h-[18px] w-[18px] dark:block"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.8"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					aria-hidden="true"
+				>
+					<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+				</svg>
+			</button>
+		</nav>
+
+		<a
+			href={t.profile.cv}
+			class="hidden shrink-0 items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-bold text-cream transition-transform hover:scale-[1.03] lg:flex dark:bg-cream dark:text-ink"
+		>
+			<svg
+				class="h-4 w-4"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				aria-hidden="true"
+			>
+				<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+				<polyline points="7 10 12 15 17 10"></polyline>
+				<line x1="12" y1="15" x2="12" y2="3"></line>
+			</svg>
+			{t.nav.cv}
+		</a>
+
+		<!-- mobile -->
+		<div class="flex items-center gap-2 lg:hidden">
+			<a
+				href={altHref}
+				hreflang={alt}
+				aria-label={t.language.switchTo}
+				class="flex h-11 min-w-11 items-center justify-center rounded-full bg-cream-100 px-3 text-[13px] font-bold text-ink dark:bg-night-surface dark:text-cream"
+				>{t.language.other}</a
+			>
+			<button
+				type="button"
+				data-theme-toggle
+				aria-label={t.theme.toggle}
+				class="flex h-11 w-11 items-center justify-center rounded-full text-muted dark:text-cream/70"
+			>
+				<svg
+					class="h-5 w-5 dark:hidden"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.8"
+					stroke-linecap="round"
+					aria-hidden="true"
+				>
+					<circle cx="12" cy="12" r="4.2"></circle>
+					<line x1="12" y1="3" x2="12" y2="5"></line>
+					<line x1="12" y1="19" x2="12" y2="21"></line>
+					<line x1="3" y1="12" x2="5" y2="12"></line>
+					<line x1="19" y1="12" x2="21" y2="12"></line>
+				</svg>
+				<svg
+					class="hidden h-5 w-5 dark:block"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.8"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					aria-hidden="true"
+				>
+					<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+				</svg>
+			</button>
+			<button
+				type="button"
+				id="menu-button"
+				aria-expanded="false"
+				aria-controls="mobile-menu"
+				aria-label={t.nav.menu}
+				class="flex h-11 w-11 items-center justify-center rounded-full text-ink dark:text-cream"
+			>
+				<svg
+					class="h-6 w-6"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					aria-hidden="true"
+				>
+					<line x1="4" y1="8" x2="20" y2="8"></line>
+					<line x1="4" y1="16" x2="20" y2="16"></line>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<div
+		id="mobile-menu"
+		hidden
+		class="mx-5 rounded-3xl border border-line bg-white p-3 shadow-lg lg:hidden dark:border-night-line dark:bg-night-surface"
+	>
+		<ul class="flex flex-col">
+			{
+				links.map((link) => (
+					<li>
+						<a
+							href={link.href}
+							class="block rounded-2xl px-4 py-4 text-base font-semibold text-ink hover:bg-cream-100 dark:text-cream dark:hover:bg-night-raised"
+						>
+							{link.label}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+		<a
+			href={t.profile.cv}
+			class="mt-2 flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-4 text-base font-bold text-cream dark:bg-cream dark:text-ink"
+		>
+			<svg
+				class="h-[18px] w-[18px]"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				aria-hidden="true"
+			>
+				<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+				<polyline points="7 10 12 15 17 10"></polyline>
+				<line x1="12" y1="15" x2="12" y2="3"></line>
+			</svg>
+			{t.nav.cv}
+		</a>
+	</div>
+</header>
+
+<script>
+	const menuButton = document.getElementById("menu-button");
+	const menu = document.getElementById("mobile-menu");
+
+	menuButton?.addEventListener("click", () => {
+		const open = menuButton.getAttribute("aria-expanded") === "true";
+		menuButton.setAttribute("aria-expanded", String(!open));
+		if (menu) menu.hidden = open;
+	});
+
+	menu?.addEventListener("click", (event) => {
+		if ((event.target as HTMLElement).closest("a")) {
+			menuButton?.setAttribute("aria-expanded", "false");
+			menu.hidden = true;
+		}
+	});
+
+	for (const button of document.querySelectorAll("[data-theme-toggle]")) {
+		button.addEventListener("click", () => {
+			const dark = document.documentElement.classList.toggle("dark");
+			localStorage.setItem("theme", dark ? "dark" : "light");
+		});
+	}
+</script>

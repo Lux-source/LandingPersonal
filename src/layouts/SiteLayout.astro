@@ -1,0 +1,104 @@
+---
+import Nav from "@/components/site/Nav.astro";
+import SiteFooter from "@/components/site/SiteFooter.astro";
+import { getContent, otherLang, alternatePath } from "@/i18n";
+import type { Lang, PageKind } from "@/i18n";
+
+interface Props {
+	lang: Lang;
+	page: PageKind;
+	title?: string;
+	description?: string;
+}
+
+const { lang, page, title, description } = Astro.props;
+const t = getContent(lang);
+
+const pageTitle = title ?? t.meta.title;
+const pageDescription = description ?? t.meta.description;
+const altHref = alternatePath(lang, page);
+const altLang = otherLang(lang);
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{pageTitle}</title>
+		<meta name="description" content={pageDescription} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+		<link rel="alternate" hreflang={altLang} href={new URL(altHref, Astro.site ?? Astro.url)} />
+		<link rel="alternate" hreflang={lang} href={Astro.url} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={pageDescription} />
+		<meta property="og:locale" content={lang === "es" ? "es_ES" : "en_GB"} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:wght@400;500;600;700&display=swap"
+		/>
+
+		<script is:inline>
+			// Runs before paint so the page never flashes the wrong theme.
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const system = window.matchMedia("(prefers-color-scheme: dark)").matches;
+				const dark = stored ? stored === "dark" : system;
+				document.documentElement.classList.toggle("dark", dark);
+			})();
+		</script>
+	</head>
+
+	<body
+		class="min-h-screen bg-cream font-sans text-ink antialiased dark:bg-night dark:text-cream"
+	>
+		<a
+			href="#main"
+			class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-cream"
+		>
+			{lang === "es" ? "Saltar al contenido" : "Skip to content"}
+		</a>
+
+		<Nav lang={lang} page={page} />
+
+		<main id="main">
+			<slot />
+		</main>
+
+		<SiteFooter lang={lang} />
+
+		<style is:global>
+			:root {
+				color-scheme: light dark;
+			}
+			html.dark {
+				color-scheme: dark;
+			}
+			@media (prefers-reduced-motion: reduce) {
+				html {
+					scroll-behavior: auto;
+				}
+				*,
+				*::before,
+				*::after {
+					animation-duration: 0.01ms !important;
+					transition-duration: 0.01ms !important;
+				}
+			}
+			/* Bracketed gaps the site still needs from Lucian. */
+			.placeholder {
+				color: #c4713f;
+			}
+			html.dark .placeholder {
+				color: #e2a273;
+			}
+		</style>
+	</body>
+</html>

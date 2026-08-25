@@ -1,0 +1,21 @@
+---
+interface Props {
+	class?: string;
+}
+
+const { class: className = "w-[240px] max-w-full" } = Astro.props;
+---
+
+<svg
+	class={className}
+	viewBox="0 0 240 16"
+	fill="none"
+	preserveAspectRatio="none"
+	aria-hidden="true"
+>
+	<path
+		d="M2 11c26-7 52 5 78-1 26-6 52 6 78 0 26-6 52 4 80-2"
+		stroke="#E8A020"
+		stroke-width="4"
+		stroke-linecap="round"></path>
+</svg>
