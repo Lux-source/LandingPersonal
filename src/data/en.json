@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Lucian Andrei Negoita — Software Engineer",
-    "description": "Backend software engineer in Spain. I design APIs and the boundaries between services. Currently Solutions Architect at Capgemini Invent."
+    "title": "Lucian Andrei Negoita — Solutions Architect",
+    "description": "Cloud and applications solutions architect in Spain. I design APIs, service boundaries and the decisions that hold them together. Currently at Capgemini Invent, for Repsol."
   },
   "nav": {
     "work": "Work",
@@ -13,7 +13,7 @@
   "profile": {
     "name": "Lucian Andrei Negoita",
     "short": "Lucian",
-    "role": "Software engineer · Backend",
+    "role": "Solutions Architect · Cloud & Applications",
     "location": "Spain · Remote",
     "email": "negoitalucianandrei@gmail.com",
     "phone": "+34 671 901 629",
@@ -24,9 +24,9 @@
   },
   "hero": {
     "greeting": "Hola, soy Lucian. I make software behave itself",
-    "lead": "Backend engineer in Spain. I draw the lines between services, then write the code on both sides of them.",
+    "lead": "I design application and cloud architecture: where each boundary goes, why, and what happens when it fails. Then I write the code on both sides of it.",
     "nowLabel": "Right now",
-    "now": "Building APIs at <strong>Capgemini Invent</strong>, for Repsol.",
+    "now": "Solutions Architect at <strong>Capgemini Invent</strong>, for Repsol.",
     "sayHello": "Say hello",
     "github": "GitHub",
     "linkedin": "LinkedIn"
@@ -93,12 +93,14 @@
     "other": "ES"
   },
   "skills": [
-    { "name": "Java", "featured": true },
-    { "name": "Spring Boot", "featured": true },
+    { "name": "Solutions architecture", "featured": true },
+    { "name": "REST API design", "featured": true },
+    { "name": "AWS", "featured": true },
+    { "name": "Java", "featured": false },
+    { "name": "Spring Boot", "featured": false },
     { "name": "Python", "featured": false },
     { "name": "TypeScript", "featured": false },
     { "name": "Angular", "featured": false },
-    { "name": "AWS", "featured": false },
     { "name": "Linux", "featured": false },
     { "name": "SQL", "featured": false },
     { "name": "CI/CD", "featured": false }

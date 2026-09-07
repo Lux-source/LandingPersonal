@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Lucian Andrei Negoita — Ingeniero de Software",
-    "description": "Ingeniero de software backend en España. Diseño APIs y los límites entre servicios. Actualmente Solutions Architect en Capgemini Invent."
+    "title": "Lucian Andrei Negoita — Arquitecto de Soluciones",
+    "description": "Arquitecto de soluciones cloud y aplicaciones en España. Diseño APIs, límites entre servicios y las decisiones que los sostienen. Actualmente en Capgemini Invent, para Repsol."
   },
   "nav": {
     "work": "Trayectoria",
@@ -13,7 +13,7 @@
   "profile": {
     "name": "Lucian Andrei Negoita",
     "short": "Lucian",
-    "role": "Ingeniero de software · Backend",
+    "role": "Arquitecto de Soluciones · Cloud y Aplicaciones",
     "location": "España · Remoto",
     "email": "negoitalucianandrei@gmail.com",
     "phone": "+34 671 901 629",
@@ -24,9 +24,9 @@
   },
   "hero": {
     "greeting": "Hola, soy Lucian. Hago que el software se comporte",
-    "lead": "Ingeniero backend en España. Dibujo las líneas entre servicios y después escribo el código a ambos lados.",
+    "lead": "Diseño la arquitectura de aplicaciones y de cloud: dónde va cada límite, por qué, y qué ocurre cuando falla. Y después escribo el código a ambos lados.",
     "nowLabel": "Ahora mismo",
-    "now": "Construyendo APIs en <strong>Capgemini Invent</strong>, para Repsol.",
+    "now": "Arquitecto de Soluciones en <strong>Capgemini Invent</strong>, para Repsol.",
     "sayHello": "Escríbeme",
     "github": "GitHub",
     "linkedin": "LinkedIn"
@@ -93,12 +93,14 @@
     "other": "EN"
   },
   "skills": [
-    { "name": "Java", "featured": true },
-    { "name": "Spring Boot", "featured": true },
+    { "name": "Arquitectura de soluciones", "featured": true },
+    { "name": "Diseño de APIs REST", "featured": true },
+    { "name": "AWS", "featured": true },
+    { "name": "Java", "featured": false },
+    { "name": "Spring Boot", "featured": false },
     { "name": "Python", "featured": false },
     { "name": "TypeScript", "featured": false },
     { "name": "Angular", "featured": false },
-    { "name": "AWS", "featured": false },
     { "name": "Linux", "featured": false },
     { "name": "SQL", "featured": false },
     { "name": "CI/CD", "featured": false }

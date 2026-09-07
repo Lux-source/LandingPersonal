@@ -35,11 +35,18 @@ const t = getContent(lang);
 	</div>
 
 	<div class="flex w-full min-w-0 flex-col gap-5 lg:order-1 lg:flex-1">
-		<h1
-			class="font-display text-[46px] leading-[1.03] tracking-tight sm:text-6xl lg:text-[72px] lg:leading-[1.02]"
-		>
-			{t.hero.greeting}<span class="text-terracotta">.</span>
-		</h1>
+		<div class="flex flex-col gap-3">
+			<p
+				class="text-xs font-bold uppercase tracking-[0.14em] text-terracotta dark:text-terracotta-light"
+			>
+				{t.profile.role}
+			</p>
+			<h1
+				class="font-display text-[46px] leading-[1.03] tracking-tight sm:text-6xl lg:text-[72px] lg:leading-[1.02]"
+			>
+				{t.hero.greeting}<span class="text-terracotta">.</span>
+			</h1>
+		</div>
 		<Squiggle class="-mt-2 w-[190px] lg:w-[240px]" />
 		<p class="max-w-[500px] text-lg leading-relaxed text-muted lg:text-xl dark:text-cream/75">
 			{t.hero.lead}
