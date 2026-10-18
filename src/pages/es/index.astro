@@ -4,6 +4,8 @@ import AboutMe from "@/components/AboutMe.astro";
 import CodeIcon from "@/components/icons/Code.astro";
 import Projects from "@/components/Projects.astro";
 import Education from "@/components/Education.astro";
+import Experience from "@/components/Experience.astro";
+import Briefcase from "@/components/icons/Briefcase.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
@@ -13,7 +15,7 @@ const lang = "es";
 ---
 
 <Layout
-	title="Portfolio de Lucian Andrei Negoita - Full Stack & DevOps"
+	title="Portfolio de Lucian Andrei Negoita - Arquitectura de Soluciones y Cloud"
 	description="Portfolio personal de Lucian Andrei Negoita, Ingeniero Informático (B.Sc. Computer Science) con enfoque en software, sistemas distribuidos y arquitectura cloud."
 	lang={lang}
 >
@@ -22,6 +24,13 @@ const lang = "es";
 			<Hero lang={lang} />
 		</SectionContainer>
 		<div class="space-y-24">
+			<SectionContainer id="experience">
+				<TitleSection>
+					<Briefcase class="w-8 h-8" />
+					Experiencia
+				</TitleSection>
+				<Experience lang={lang} />
+			</SectionContainer>
 			<SectionContainer id="projects">
 				<TitleSection>
 					<CodeIcon class="w-7 h-7" />

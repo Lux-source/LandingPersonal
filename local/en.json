@@ -10,16 +10,16 @@
 	},
 	"hero": {
 		"intro": "Hello, I'm Lucian Andrei Negoita",
-		"description": "B.Sc. in Computer Science (Computer Engineer) focused on <strong>Software, Distributed Systems, and Cloud Architecture</strong>.",
-		"badge": "Open to work",
+		"description": "Computer Engineer and Solutions Architect at Capgemini Invent. I work on <strong>cloud and software architecture, distributed systems and applied AI</strong>.",
+		"badge": "Open to new opportunities",
 		"contactMe": "Contact me",
 		"linkedin": "LinkedIn"
 	},
 	"aboutMe": {
-		"role": "Cloud Architecture | DevOps | Full Stack Development",
-		"description": "B.Sc. in Computer Science (Computer Engineer) focused on Software, Distributed Systems, and Cloud Computing. I have experience designing and implementing solutions on AWS, automation and CI/CD, working in agile teams.",
-		"p1": "I have completed an Undergraduate Degree in Computer Science and Engineering (Bilingual Program), specializing in Cloud solutions, DevOps, and Full Stack development.",
-		"p2": "I have led and collaborated on various technical projects, including scalable web application development, advanced data analysis and filtering, as well as the design and implementation of search algorithms and artificial intelligence techniques. My professional focus revolves around Cloud Architecture, DevOps practices, and Full Stack Development.",
+		"role": "Solutions Architecture | Cloud | Applied AI",
+		"description": "I am a Solutions Architect at Capgemini Invent, working inside Repsol's development architecture service. I review and design architectures on Azure, AWS and hybrid environments, write technical standards for the development lifecycle and take part in the corporate framework for adopting AI agents across the SDLC.",
+		"p1": "I graduated in Computer Engineering from UCLM (bilingual track), first in my cohort. I hold the AWS Solutions Architect Associate certification and I am studying a Master's in Big Data and Cloud Computing.",
+		"p2": "Outside work I keep my own projects going so I stay close to the code. The ones on this page are designed and built by me, with the architecture decisions documented in each repository.",
 		"contactLabel": "Contact:",
 		"telLabel": "Tel:",
 		"tel": "+34 671 901 629",
@@ -27,6 +27,12 @@
 		"github": "GitHub"
 	},
 	"education": [
+		{
+			"date": "Sep 2026 - Present",
+			"title": "Master's Degree in Big Data and Cloud Computing",
+			"institution": "Universidad de Castilla-La Mancha",
+			"description": "In progress, online"
+		},
 		{
 			"date": "Feb 2025 - Jun 2025",
 			"title": "Advanced University Course in Digital Tools Applied to Transportation and Logistics",
@@ -50,45 +56,69 @@
 		"readMore": "Learn more",
 		"items": [
 			{
-				"date": "Jun 2021 - Mar 2022",
-				"title": "Cryptocurrency Mining Project",
-				"company": "Freelance",
-				"description": "Management and operation of an Ethereum mining system using HiveOS. Monitoring, optimization, and troubleshooting.",
+				"date": "Mar 2026 - Present",
+				"title": "Solutions Architect",
+				"company": "Capgemini Invent | Client: Repsol",
+				"description": "Design and review of application architectures on Azure, AWS and hybrid environments for the development architecture service. Architecture documents (DSA), technical standards and platform guidelines. Corporate framework for adopting AI agents across the development lifecycle: RAG indexing, deployment model, access, security and integration.",
 				"link": ""
 			},
 			{
-				"date": "Feb 2024 - May 2024",
-				"title": "AWS Serverless Data Processing Pipeline",
-				"company": "Personal Project",
-				"description": "Designed and implemented a pipeline on AWS using S3, DynamoDB, and Lambda for real-time data analysis in e-commerce.",
-				"link": ""
-			},
-			{
-				"date": "Sep 2024 - Dec 2024",
-				"title": "Web-based E-commerce for Watches",
-				"company": "Academic Project",
-				"description": "Developed an e-commerce platform with Next.js, MongoDB, and Tailwind CSS, including a secure REST API with JWT authentication.",
+				"date": "Jul 2025 - Sep 2025",
+				"title": "Full Stack Developer (internship)",
+				"company": "Tragsatec",
+				"description": "Built applications with Angular and Spring Boot, persistence with JPA/Hibernate and migrations with Liquibase. Continuous integration with Jenkins and deployment on Apache and Tomcat.",
 				"link": ""
 			}
 		]
 	},
 	"projects": {
+		"mortgage": {
+			"title": "Mortgage Analyst",
+			"description": "Mortgage comparison for the Spanish market that ranks offers by total cost in euros over the life of the loan, under Euribor scenarios, including the bank's linked products and each region's purchase tax. Hexagonal architecture in Maven modules with rules checked by ArchUnit on every build, money always in BigDecimal, SCD2 offer versioning and Euribor ingestion from Banco de España. Decisions are recorded in 12 ADRs."
+		},
+		"lucyerp": {
+			"title": "LucyERP",
+			"description": "ERP for aesthetic clinics: room-based scheduling, clients, sales, stock and cash register, with automatic reminders through the WhatsApp Business Cloud API. It runs on the clinic's PC as a Windows service, with the whole database in a single SQLite file and scheduled backups."
+		},
+		"relay": {
+			"title": "Relay Traffic Copilot",
+			"description": "AI copilot for a self-employed haulier working with Amazon Relay. It reads load offers from email, computes the real profit per km including empty legs and the official diesel price, and drafts a negotiation reply in Spanish and English. Every action needs human approval in the dashboard."
+		},
+		"peaje": {
+			"title": "peaje",
+			"description": "Self-hosted proxy between coding agents and LLM providers. It records the exact cost of every request and enforces hard per-key budgets through two-phase reserve and settle accounting over a crash-safe journal. One Go binary with zero external dependencies, backed by SQLite."
+		},
+		"tfg": {
+			"title": "Real-time collaborative editor (Thesis)",
+			"description": "Real-time collaborative coding platform integrated into Moodle. Edits sync through CRDTs (Yjs) via Hocuspocus and events are published to Apache Kafka. The whole stack runs on Docker Compose and is validated with Selenium E2E tests with up to 10 concurrent users."
+		},
 		"myCloudDocs": {
 			"title": "myCloudDocs",
-			"description": "Repository where I keep the documentation of various projects I've built using AWS services"
+			"description": "Documentation of projects deployed on AWS: a three-tier web app, a serverless pipeline with S3, Lambda and DynamoDB, and WordPress on EC2 with Aurora."
 		},
 		"eterna": {
 			"title": "Eterna",
-			"description": "E-commerce platform for selling watches, developed with Next.js, MongoDB, and Tailwind CSS, featuring a secure REST API with JWT authentication"
+			"description": "Watch e-commerce built with Next.js, MongoDB and Tailwind CSS, with a REST API and JWT authentication."
 		},
 		"deviceManagementApp": {
-			"title": "Device Management App",
-			"description": "Full Stack application developed by a team using agile methodologies (Scrum), C#, Blazor, and SQLite. It implements unit tests with xUnit and automated CI/CD pipelines in Azure DevOps for continuous deployments"
+			"title": "Device Management",
+			"description": "Team project using Scrum, C#, Blazor and SQLite, tested with xUnit and shipped through CI/CD on Azure DevOps."
+		},
+		"inteligentes": {
+			"title": "Urban graph search",
+			"description": "Informed and uninformed search algorithms (BFS, DFS, A* and best-first) over a city's street graph, in Python."
 		}
 	},
 	"footer": {
 		"text": "© {year} <strong>Lucian Andrei Negoita</strong>. Inspired by <a href=\"https://midu.dev/\" target=\"_blank\" class=\"hover:underline\">midudev</a> project.",
 		"sobreMi": "About Me",
 		"contacto": "Contact"
+	},
+	"projectsUi": {
+		"code": "Code",
+		"preview": "Demo",
+		"others": "Other projects",
+		"private": "Private code",
+		"wip": "Work in progress"
 	}
 }

@@ -10,16 +10,16 @@
 	},
 	"hero": {
 		"intro": "Hola, soy Lucian Andrei Negoita",
-		"description": "Ingeniero Informático (B.Sc. Computer Science) centrado en <strong>Software, Sistemas Distribuidos y Arquitectura Cloud</strong>.",
-		"badge": "Disponible para trabajar",
+		"description": "Ingeniero Informático y Arquitecto de Soluciones en Capgemini Invent. Trabajo en <strong>arquitectura cloud y de software, sistemas distribuidos e IA aplicada</strong>.",
+		"badge": "Abierto a nuevas oportunidades",
 		"contactMe": "Contáctame",
 		"linkedin": "LinkedIn"
 	},
 	"aboutMe": {
-		"role": "Arquitectura Cloud | DevOps | Desarrollo Full Stack",
-		"description": "Ingeniero Informático (B.Sc. Computer Science) con foco en Software, Sistemas Distribuidos y Cloud Computing. Tengo experiencia diseñando e implementando soluciones en AWS, automatización y CI/CD, trabajando en equipos ágiles.",
-		"p1": "He completado el Grado en Ingeniería Informática (modalidad bilingüe), con especialización en soluciones cloud, DevOps y desarrollo full stack.",
-		"p2": "He liderado y participado en diversos proyectos técnicos, incluyendo desarrollo de aplicaciones web escalables, análisis y filtrado avanzado de datos, así como el diseño e implementación de algoritmos de búsqueda e inteligencia artificial. Mi enfoque profesional está orientado hacia la arquitectura cloud, las prácticas DevOps y el Desarrollo Full Stack.",
+		"role": "Arquitectura de Soluciones | Cloud | IA aplicada",
+		"description": "Soy Arquitecto de Soluciones en Capgemini Invent, dentro del servicio de arquitectura de desarrollo de Repsol. Reviso y diseño arquitecturas en Azure, AWS y entornos híbridos, redacto normativa técnica para el ciclo de desarrollo y participo en el marco corporativo para adoptar agentes de IA en el SDLC.",
+		"p1": "Me gradué en Ingeniería Informática por la UCLM (modalidad bilingüe) como primero de mi promoción. Tengo la certificación AWS Solutions Architect Associate y estoy cursando el Máster en Big Data y Cloud Computing.",
+		"p2": "Fuera del trabajo mantengo proyectos propios para no perder el contacto con el código. Los que aparecen en esta página los he diseñado y desarrollado yo, con las decisiones de arquitectura documentadas en cada repositorio.",
 		"contactLabel": "Contacto:",
 		"telLabel": "Tel:",
 		"tel": "+34 671 901 629",
@@ -27,6 +27,12 @@
 		"github": "GitHub"
 	},
 	"education": [
+		{
+			"date": "Sep 2026 - Actualidad",
+			"title": "Máster Universitario en Big Data y Cloud Computing",
+			"institution": "Universidad de Castilla-La Mancha",
+			"description": "En curso, modalidad online"
+		},
 		{
 			"date": "Feb 2025 - Jun 2025",
 			"title": "Curso Universitario de Formación Avanzada en Herramientas Digitales Aplicadas al Transporte y la Logística",
@@ -50,45 +56,69 @@
 		"readMore": "Saber más",
 		"items": [
 			{
-				"date": "Jun 2021 - Mar 2022",
-				"title": "Proyecto de Minería de Criptomonedas",
-				"company": "Freelance",
-				"description": "Gestión y operación de un sistema de minería de Ethereum usando HiveOS. Monitoreo, optimización y resolución de problemas.",
+				"date": "Mar 2026 - Actualidad",
+				"title": "Arquitecto de Soluciones",
+				"company": "Capgemini Invent | Cliente Repsol",
+				"description": "Diseño y revisión de arquitecturas de aplicaciones en Azure, AWS y entornos híbridos para el servicio de arquitectura de desarrollo. Documentos de arquitectura (DSA), normativa técnica y estándares de plataforma. Marco corporativo para la adopción de agentes de IA en el ciclo de desarrollo: indexación RAG, modelo de despliegue, acceso, seguridad e integración.",
 				"link": ""
 			},
 			{
-				"date": "Feb 2024 - May 2024",
-				"title": "Pipeline Serverless para Procesamiento de Datos en AWS",
-				"company": "Proyecto Personal",
-				"description": "Diseñé e implementé una pipeline en AWS usando S3, DynamoDB y Lambda para análisis de datos en tiempo real en comercio electrónico.",
-				"link": ""
-			},
-			{
-				"date": "Sep 2024 - Dic 2024",
-				"title": "E-commerce Web para Venta de Relojes",
-				"company": "Proyecto Académico",
-				"description": "Desarrollé una plataforma de comercio electrónico con Next.js, MongoDB y Tailwind CSS, incluyendo una API REST segura con autenticación JWT.",
+				"date": "Jul 2025 - Sep 2025",
+				"title": "Desarrollador Full Stack (prácticas)",
+				"company": "Tragsatec",
+				"description": "Desarrollo de aplicaciones con Angular y Spring Boot, persistencia con JPA/Hibernate y migraciones con Liquibase. Integración continua con Jenkins y despliegue sobre Apache y Tomcat.",
 				"link": ""
 			}
 		]
 	},
 	"projects": {
+		"mortgage": {
+			"title": "Analista de Hipotecas",
+			"description": "Comparador de hipotecas para el mercado español que ordena las ofertas por coste total en euros durante toda la vida del préstamo, con escenarios de Euríbor, vinculaciones y el impuesto de compra de cada comunidad autónoma. Arquitectura hexagonal en módulos Maven con reglas verificadas por ArchUnit en cada build, importes siempre en BigDecimal, versionado SCD2 de ofertas e ingesta del Euríbor desde el Banco de España. Las decisiones están recogidas en 12 ADRs."
+		},
+		"lucyerp": {
+			"title": "LucyERP",
+			"description": "ERP para clínicas estéticas: agenda por cabinas, clientes, ventas, stock y caja, con recordatorios automáticos por WhatsApp Business Cloud API. Se instala en el PC del centro como servicio de Windows, con la base de datos en un único fichero SQLite y copias de seguridad programadas."
+		},
+		"relay": {
+			"title": "Relay Traffic Copilot",
+			"description": "Copiloto con IA para un transportista autónomo que trabaja con Amazon Relay. Lee las ofertas de carga del correo, calcula la rentabilidad real en €/km contando los kilómetros en vacío y el precio oficial del gasoil, y propone una respuesta de negociación en español e inglés. Cualquier acción pasa antes por aprobación humana en el panel."
+		},
+		"peaje": {
+			"title": "peaje",
+			"description": "Proxy autoalojado entre los agentes de código y los proveedores de LLM. Registra el coste exacto de cada petición y aplica presupuestos por clave con corte duro, mediante reserva y liquidación en dos fases sobre un journal resistente a caídas. Un único binario en Go, sin dependencias externas, con SQLite."
+		},
+		"tfg": {
+			"title": "Editor colaborativo en tiempo real (TFG)",
+			"description": "Plataforma de programación colaborativa en tiempo real integrada en Moodle. La edición se sincroniza con CRDTs (Yjs) a través de Hocuspocus y los eventos se publican en Apache Kafka. Toda la pila se levanta con Docker Compose y se valida con pruebas E2E en Selenium con hasta 10 usuarios simultáneos."
+		},
 		"myCloudDocs": {
 			"title": "myCloudDocs",
-			"description": "Repositorio donde guardo la documentación de varios proyectos que he construido utilizando servicios de AWS"
+			"description": "Documentación de proyectos desplegados en AWS: aplicación web en tres capas, pipeline serverless con S3, Lambda y DynamoDB, y WordPress sobre EC2 con Aurora."
 		},
 		"eterna": {
 			"title": "Eterna",
-			"description": "Plataforma de comercio electrónico para venta de relojes, desarrollada con Next.js, MongoDB y Tailwind CSS, incluyendo una API REST segura con autenticación JWT"
+			"description": "E-commerce de relojes con Next.js, MongoDB y Tailwind CSS, con API REST y autenticación JWT."
 		},
 		"deviceManagementApp": {
-			"title": "Aplicación para Gestión de Dispositivos",
-			"description": "Aplicación Full Stack desarrollada en equipo con metodologías ágiles (Scrum), C#, Blazor y SQLite. Implementa pruebas unitarias con xUnit y pipelines automatizados de CI/CD en Azure DevOps para despliegues continuos"
+			"title": "Gestión de Dispositivos",
+			"description": "Aplicación en equipo con Scrum, C#, Blazor y SQLite, pruebas con xUnit y CI/CD en Azure DevOps."
+		},
+		"inteligentes": {
+			"title": "Búsqueda en grafos urbanos",
+			"description": "Algoritmos de búsqueda informada y no informada (BFS, DFS, A* y primero el mejor) sobre el grafo de calles de una ciudad, en Python."
 		}
 	},
 	"footer": {
 		"text": "© {year} <strong>Lucian Andrei Negoita</strong>. Inspirado en el proyecto de <a href=\"https://midu.dev/\" target=\"_blank\" class=\"hover:underline\">midudev</a>.",
 		"sobreMi": "Sobre mí",
 		"contacto": "Contacto"
+	},
+	"projectsUi": {
+		"code": "Código",
+		"preview": "Demo",
+		"others": "Otros proyectos",
+		"private": "Código privado",
+		"wip": "En desarrollo"
 	}
 }

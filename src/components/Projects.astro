@@ -2,97 +2,95 @@
 import GitHub from "./icons/GitHub.astro";
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
-import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 import AWS from "./icons/Aws.astro";
 import CSharp from "./icons/CSharp.astro";
 import Blazor from "./icons/Blazor.astro";
 import SQLite from "./icons/SQLite.astro";
 
-// Importar los JSON de traducciones:
 import translationsES from "../../local/es.json";
 import translationsEN from "../../local/en.json";
 
-// Definimos el idioma por defecto (es). Si llamas <Projects lang="en" />, se usará el en.json
 const { lang = "es" } = Astro.props;
 const t = lang === "en" ? translationsEN : translationsES;
+
 interface Tag {
 	name: string;
 	class: string;
 	icon?: any;
 }
 
-// Mantenemos las etiquetas tal cual
 const TAGS: Record<string, Tag> = {
-	AWS: {
-		name: "AWS",
-		class: "bg-orange-500 text-white",
-		icon: AWS,
-	},
-	NEXT: {
-		name: "Next.js",
-		class: "bg-black text-white",
-		icon: NextJS,
-	},
-	TAILWIND: {
-		name: "Tailwind CSS",
-		class: "bg-[#38B2AC] text-white",
-		icon: Tailwind,
-	},
-	MONGO: {
-		name: "MongoDB",
-		class: "bg-green-600 text-white",
-	},
-	CSHARP: {
-		name: "C#",
-		class: "bg-purple-600 text-white",
-		icon: CSharp,
-	},
-	SQLITE: {
-		name: "SQLite",
-		class: "bg-sky-700 text-white",
-		icon: SQLite,
-	},
-	BLAZOR: {
-		name: "Blazor",
-		class: "bg-indigo-600 text-white",
-		icon: Blazor,
-	},
+	AWS: { name: "AWS", class: "bg-orange-500 text-white", icon: AWS },
+	NEXT: { name: "Next.js", class: "bg-black text-white", icon: NextJS },
+	TAILWIND: { name: "Tailwind CSS", class: "bg-[#38B2AC] text-white", icon: Tailwind },
+	MONGO: { name: "MongoDB", class: "bg-green-600 text-white" },
+	CSHARP: { name: "C#", class: "bg-purple-600 text-white", icon: CSharp },
+	SQLITE: { name: "SQLite", class: "bg-sky-700 text-white", icon: SQLite },
+	BLAZOR: { name: "Blazor", class: "bg-indigo-600 text-white", icon: Blazor },
+	JAVA: { name: "Java 17", class: "bg-[#b07219] text-white" },
+	SPRING: { name: "Spring Boot", class: "bg-[#6DB33F] text-white" },
+	ANGULAR: { name: "Angular", class: "bg-[#DD0031] text-white" },
+	POSTGRES: { name: "PostgreSQL", class: "bg-[#336791] text-white" },
+	ARCHUNIT: { name: "Hexagonal + ArchUnit", class: "bg-gray-700 text-white" },
+	GO: { name: "Go", class: "bg-[#00ADD8] text-white" },
+	PYTHON: { name: "Python", class: "bg-[#3776AB] text-white" },
+	CLAUDE: { name: "Claude API", class: "bg-[#D97757] text-white" },
+	FLASK: { name: "Flask", class: "bg-gray-800 text-white" },
+	PRISMA: { name: "Prisma", class: "bg-[#2D3748] text-white" },
+	WHATSAPP: { name: "WhatsApp API", class: "bg-[#25D366] text-black" },
+	KAFKA: { name: "Kafka", class: "bg-black text-white" },
+	YJS: { name: "Yjs (CRDT)", class: "bg-violet-600 text-white" },
+	DOCKER: { name: "Docker", class: "bg-[#2496ED] text-white" },
+	TS: { name: "TypeScript", class: "bg-[#3178C6] text-white" },
 };
 
-// Definimos los proyectos consultando el JSON (t.projects...)
-const PROJECTS = [
+const FEATURED = [
 	{
-		title: t.projects.myCloudDocs.title,
-		description: t.projects.myCloudDocs.description,
-		link: "",
-		github: "https://github.com/Lux-source/myCloudDocs",
-		image: "/projects/myCloudDocs.gif",
-		tags: [TAGS.AWS],
+		...t.projects.mortgage,
+		github: "https://github.com/Lux-source/analista_hipotecas",
+		image: "/projects/mortgage.webp",
+		status: t.projectsUi.wip,
+		tags: [TAGS.JAVA, TAGS.SPRING, TAGS.ARCHUNIT, TAGS.POSTGRES, TAGS.ANGULAR],
 	},
 	{
-		title: t.projects.eterna.title,
-		description: t.projects.eterna.description,
-		link: "",
-		github: "https://github.com/Lux-source/WES_WatchShop",
-		image: "/projects/ecommerceEterna.gif",
-		tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.MONGO],
+		...t.projects.lucyerp,
+		github: "https://github.com/KORA-Digital-Solutions/lucyERP",
+		image: "/projects/lucyerp.webp",
+		tags: [TAGS.NEXT, TAGS.TS, TAGS.PRISMA, TAGS.SQLITE, TAGS.WHATSAPP],
 	},
 	{
-		title: t.projects.deviceManagementApp.title,
-		description: t.projects.deviceManagementApp.description,
-		link: "",
-		github:
-			"https://dev.azure.com/SE2425TheAvengers/SEIIProject/_git/SEIIProject",
-		image: "/projects/appForDevices.gif",
-		tags: [TAGS.CSHARP, TAGS.BLAZOR, TAGS.SQLITE],
+		...t.projects.relay,
+		image: "/projects/relay.webp",
+		status: t.projectsUi.private,
+		tags: [TAGS.PYTHON, TAGS.CLAUDE, TAGS.FLASK, TAGS.SQLITE],
 	},
+	{
+		...t.projects.peaje,
+		github: "https://github.com/Lux-source/peaje",
+		image: "/projects/peaje.webp",
+		status: t.projectsUi.wip,
+		tags: [TAGS.GO, TAGS.SQLITE],
+	},
+	{
+		...t.projects.tfg,
+		image: "/projects/tfg.webp",
+		status: t.projectsUi.private,
+		tags: [TAGS.KAFKA, TAGS.YJS, TAGS.DOCKER],
+	},
+];
+
+const OTHERS = [
+	{ ...t.projects.myCloudDocs, github: "https://github.com/Lux-source/myCloudDocs", tags: [TAGS.AWS] },
+	{ ...t.projects.eterna, github: "https://github.com/Lux-source/WES_WatchShop", tags: [TAGS.NEXT, TAGS.MONGO] },
+	{ ...t.projects.deviceManagementApp, github: "", tags: [TAGS.CSHARP, TAGS.BLAZOR] },
+	{ ...t.projects.inteligentes, github: "https://github.com/Lux-source/Inteligentes", tags: [TAGS.PYTHON] },
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
 	{
-		PROJECTS.map(({ image, title, description, tags, link, github }) => (
+		FEATURED.map(({ image, title, description, tags, github, status }: any) => (
 			<article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
 				<div class="w-full md:w-1/2">
 					<div class="relative flex flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -107,34 +105,29 @@ const PROJECTS = [
 				<div class="w-full md:w-1/2 md:max-w-lg">
 					<h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
 						{title}
+						{status && (
+							<span class="ml-2 align-middle rounded-full border border-yellow-500/60 px-2 py-0.5 text-xs font-medium text-yellow-600 dark:text-yellow-400">
+								{status}
+							</span>
+						)}
 					</h3>
 					<div class="flex flex-wrap mt-2">
-						<ul class="flex flex-row mb-2 gap-x-2">
-							{tags.map((tag) => (
+						<ul class="flex flex-row flex-wrap mb-2 gap-2">
+							{tags.map((tag: Tag) => (
 								<li>
-									<span
-										class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
-									>
+									<span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
 										{tag.icon ? <tag.icon class="w-4 h-4" /> : null}
 										{tag.name}
 									</span>
 								</li>
 							))}
 						</ul>
-						<div class="mt-2 text-gray-700 dark:text-gray-400">
-							{description}
-						</div>
+						<div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
 						<footer class="flex items-end justify-start mt-4 gap-x-4">
 							{github && (
 								<LinkButton href={github}>
 									<GitHub class="w-6 h-6" />
-									Code
-								</LinkButton>
-							)}
-							{link && (
-								<LinkButton href={link}>
-									<Link class="w-4 h-4" />
-									Preview
+									{t.projectsUi.code}
 								</LinkButton>
 							)}
 						</footer>
@@ -144,3 +137,31 @@ const PROJECTS = [
 		))
 	}
 </div>
+
+<h3 class="mt-20 mb-6 text-xl font-bold text-gray-800 dark:text-gray-100">
+	{t.projectsUi.others}
+</h3>
+<ul class="grid gap-4 sm:grid-cols-2">
+	{
+		OTHERS.map(({ title, description, tags, github }: any) => (
+			<li class="rounded-xl border border-gray-200 p-5 dark:border-gray-800">
+				<div class="flex items-start justify-between gap-3">
+					<h4 class="font-semibold text-gray-800 dark:text-gray-100">{title}</h4>
+					{github && (
+						<a href={github} target="_blank" rel="noopener" aria-label={`${title} GitHub`} class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+							<GitHub class="w-5 h-5" />
+						</a>
+					)}
+				</div>
+				<p class="mt-2 text-sm text-gray-700 dark:text-gray-400">{description}</p>
+				<ul class="flex flex-wrap gap-2 mt-3">
+					{tags.map((tag: Tag) => (
+						<li>
+							<span class={`flex gap-x-1 rounded-full text-[11px] ${tag.class} py-0.5 px-2`}>{tag.name}</span>
+						</li>
+					))}
+				</ul>
+			</li>
+		))
+	}
+</ul>
