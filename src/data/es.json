@@ -1,13 +1,12 @@
 {
   "meta": {
     "title": "Lucian Andrei Negoita — Arquitecto de Soluciones",
-    "description": "Arquitecto de soluciones cloud y aplicaciones en España. Diseño APIs, límites entre servicios y las decisiones que los sostienen. Actualmente en Capgemini Invent, para Repsol."
+    "description": "Arquitecto de soluciones cloud y aplicaciones en España. Diseño APIs, límites entre servicios y las decisiones que los sostienen. Actualmente en Capgemini Invent, para una multinacional energética del IBEX 35."
   },
   "nav": {
     "work": "Trayectoria",
     "projects": "Proyectos",
     "about": "Sobre mí",
-    "cv": "Mi CV",
     "menu": "Abrir menú"
   },
   "profile": {
@@ -16,17 +15,15 @@
     "role": "Arquitecto de Soluciones · Cloud y Aplicaciones",
     "location": "España · Remoto",
     "email": "negoitalucianandrei@gmail.com",
-    "phone": "+34 671 901 629",
     "github": "https://github.com/Lux-source",
     "linkedin": "https://linkedin.com/in/lucian-andrei-negoita",
-    "cv": "",
     "photoAlt": "Retrato de Lucian Andrei Negoita"
   },
   "hero": {
     "greeting": "Hola, soy Lucian. Hago que el software se comporte",
     "lead": "Diseño la arquitectura de aplicaciones y de cloud: dónde va cada límite, por qué, y qué ocurre cuando falla. Y después escribo el código a ambos lados.",
     "nowLabel": "Ahora mismo",
-    "now": "Arquitecto de Soluciones en <strong>Capgemini Invent</strong>, para Repsol.",
+    "now": "Arquitecto de Soluciones en <strong>Capgemini Invent</strong>, para una multinacional energética del IBEX 35.",
     "sayHello": "Escríbeme",
     "github": "GitHub",
     "linkedin": "LinkedIn"
@@ -192,14 +189,14 @@
       "location": "Remoto, España",
       "badge": "Ahora mismo",
       "accent": "terracotta",
-      "summary": "Diseño y reviso arquitecturas de aplicaciones web, móviles y cloud para el Servicio de Arquitectura de Desarrollo de Repsol, y dejo documentada cada decisión para los equipos que las implementan.",
+      "summary": "Diseño y reviso arquitecturas de aplicaciones web, móviles y cloud en el Servicio de Arquitectura de Desarrollo de una multinacional energética del IBEX 35, y dejo documentada cada decisión para los equipos que las implementan.",
       "tags": [],
       "client": {
-        "name": "Repsol",
-        "body": "Una multinacional energética del IBEX 35. Trabajo dentro de su Development Architecture Service.",
+        "name": "Multinacional energética",
+        "body": "Una multinacional energética del IBEX 35. Trabajo dentro de su Servicio de Arquitectura de Desarrollo.",
         "facts": [
           "Contratado por Capgemini Invent",
-          "Trabajando para Repsol como cliente final",
+          "Trabajando para el cliente final",
           "Totalmente en remoto desde España"
         ]
       },
@@ -219,6 +216,11 @@
           "icon": "review",
           "title": "Revisar y gobernar",
           "body": "Mesas de arquitectura con los equipos y revisiones de diseño y código contra las puertas corporativas de calidad y seguridad."
+        },
+        {
+          "icon": "code",
+          "title": "Pruebas de concepto",
+          "body": "POCs técnicas para validar patrones antes de llevarlos a normativa: despliegues en Kubernetes, CI/CD de bases de datos y agentes de IA integrados en el ciclo de desarrollo."
         }
       ],
       "flow": [
@@ -267,6 +269,14 @@
         },
         {
           "name": "Node.js",
+          "featured": false
+        },
+        {
+          "name": "Kubernetes",
+          "featured": false
+        },
+        {
+          "name": "CI/CD de BBDD",
           "featured": false
         },
         {

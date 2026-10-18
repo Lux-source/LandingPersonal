@@ -55,7 +55,6 @@ const links = [
 				class="rounded-full bg-cream-100 px-3 py-2 text-[13px] font-bold text-ink dark:bg-night-raised dark:text-cream"
 				aria-current="true">{t.language.current}</span
 			>
-			{t.profile.cv && (
 			<a
 				href={altHref}
 				hreflang={alt}
@@ -104,27 +103,6 @@ const links = [
 			</button>
 		</nav>
 
-		<a
-			href={t.profile.cv}
-			class="hidden shrink-0 items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-bold text-cream transition-transform hover:scale-[1.03] lg:flex dark:bg-cream dark:text-ink"
-		>
-			<svg
-				class="h-4 w-4"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				aria-hidden="true"
-			>
-				<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-				<polyline points="7 10 12 15 17 10"></polyline>
-				<line x1="12" y1="15" x2="12" y2="3"></line>
-			</svg>
-			{t.nav.cv}
-		</a>
-			)}
 
 		<!-- mobile -->
 		<div class="flex items-center gap-2 lg:hidden">
@@ -212,28 +190,6 @@ const links = [
 				))
 			}
 		</ul>
-		{t.profile.cv && (
-		<a
-			href={t.profile.cv}
-			class="mt-2 flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-4 text-base font-bold text-cream dark:bg-cream dark:text-ink"
-		>
-			<svg
-				class="h-[18px] w-[18px]"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				aria-hidden="true"
-			>
-				<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-				<polyline points="7 10 12 15 17 10"></polyline>
-				<line x1="12" y1="15" x2="12" y2="3"></line>
-			</svg>
-			{t.nav.cv}
-		</a>
-		)}
 	</div>
 </header>
 

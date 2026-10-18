@@ -1,13 +1,12 @@
 {
   "meta": {
     "title": "Lucian Andrei Negoita — Solutions Architect",
-    "description": "Cloud and applications solutions architect in Spain. I design APIs, service boundaries and the decisions that hold them together. Currently at Capgemini Invent, for Repsol."
+    "description": "Cloud and applications solutions architect in Spain. I design APIs, service boundaries and the decisions that hold them together. Currently at Capgemini Invent, for an IBEX 35 multinational energy company."
   },
   "nav": {
     "work": "Work",
     "projects": "Projects",
     "about": "About",
-    "cv": "My CV",
     "menu": "Open menu"
   },
   "profile": {
@@ -16,17 +15,15 @@
     "role": "Solutions Architect · Cloud & Applications",
     "location": "Spain · Remote",
     "email": "negoitalucianandrei@gmail.com",
-    "phone": "+34 671 901 629",
     "github": "https://github.com/Lux-source",
     "linkedin": "https://linkedin.com/in/lucian-andrei-negoita",
-    "cv": "",
     "photoAlt": "Portrait of Lucian Andrei Negoita"
   },
   "hero": {
     "greeting": "Hola, soy Lucian. I make software behave itself",
     "lead": "I design application and cloud architecture: where each boundary goes, why, and what happens when it fails. Then I write the code on both sides of it.",
     "nowLabel": "Right now",
-    "now": "Solutions Architect at <strong>Capgemini Invent</strong>, for Repsol.",
+    "now": "Solutions Architect at <strong>Capgemini Invent</strong>, for an IBEX 35 multinational energy company.",
     "sayHello": "Say hello",
     "github": "GitHub",
     "linkedin": "LinkedIn"
@@ -192,14 +189,14 @@
       "location": "Remote, Spain",
       "badge": "Right now",
       "accent": "terracotta",
-      "summary": "I design and review web, mobile and cloud application architectures for Repsol's Development Architecture Service, and document every decision for the teams that build them.",
+      "summary": "I design and review web, mobile and cloud application architectures in the Development Architecture Service of an IBEX 35 multinational energy company, and document every decision for the teams that build them.",
       "tags": [],
       "client": {
-        "name": "Repsol",
-        "body": "An IBEX 35 energy multinational. I sit inside their Development Architecture Service.",
+        "name": "Multinational energy company",
+        "body": "An IBEX 35 multinational energy company. I work inside its Development Architecture Service.",
         "facts": [
-          "Employed by Capgemini Invent",
-          "Working for Repsol as end client",
+          "Hired by Capgemini Invent",
+          "Working for the end client",
           "Fully remote from Spain"
         ]
       },
@@ -219,6 +216,11 @@
           "icon": "review",
           "title": "Review and govern",
           "body": "Architecture boards with the teams, and design and code reviews against the corporate quality and security gates."
+        },
+        {
+          "icon": "code",
+          "title": "Proofs of concept",
+          "body": "Technical POCs to validate patterns before they become standards: Kubernetes deployments, database CI/CD and AI agents built into the development lifecycle."
         }
       ],
       "flow": [
@@ -267,6 +269,14 @@
         },
         {
           "name": "Node.js",
+          "featured": false
+        },
+        {
+          "name": "Kubernetes",
+          "featured": false
+        },
+        {
+          "name": "Database CI/CD",
           "featured": false
         },
         {

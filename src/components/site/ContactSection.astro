@@ -52,17 +52,6 @@ const isOlive = tone === "olive";
 				<span class="hidden sm:inline">{cta ?? t.contact.cta}</span>
 				<span class="sm:hidden">{t.profile.email}</span>
 			</a>
-			{t.profile.cv && (
-			<a
-				href={t.profile.cv}
-				class:list={[
-					"flex min-h-[54px] items-center justify-center rounded-full border-2 px-7 text-[15px] font-bold",
-					isOlive ? "border-cream text-cream" : "border-ink text-ink",
-				]}
-			>
-				{t.nav.cv}
-			</a>
-			)}
 		</div>
 	</div>
 </section>

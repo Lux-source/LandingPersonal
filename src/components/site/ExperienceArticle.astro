@@ -103,7 +103,7 @@ const DOT = ["bg-terracotta", "bg-mustard", "bg-olive"];
 	<!-- what I do -->
 	<section class="mt-12">
 		<h2 class="mb-6 font-display text-[32px] tracking-tight lg:text-[38px]">{t.work.whatIDo}</h2>
-		<div class="grid gap-4 md:grid-cols-3">
+		<div class:list={["grid gap-4", job.duties.length === 4 ? "md:grid-cols-2" : "md:grid-cols-3"]}>
 			{
 				job.duties.map((duty, index) => (
 					<div class="flex flex-col gap-3 rounded-[22px] border border-line bg-white p-6 sm:p-7 dark:border-night-line dark:bg-night-surface">
