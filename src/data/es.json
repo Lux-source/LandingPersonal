@@ -62,7 +62,7 @@
     "ctaButton": "Pregúntame por él",
     "code": "Ver el código",
     "live": "Verlo en vivo",
-    "docs": "Leer la documentación",
+    "docs": "Arquitectura en AWS y Azure",
     "source": "Código fuente"
   },
   "about": {
@@ -456,7 +456,7 @@
       "links": {
         "live": "",
         "code": "https://github.com/Lux-source/analista_hipotecas",
-        "docs": ""
+        "docs": "https://github.com/Lux-source/myCloudDocs/blob/main/migrations/apps/mortgage-analyst.md"
       },
       "lead": "Comparador para el mercado español que ordena las ofertas por coste total en euros, con escenarios de Euríbor, el coste de las vinculaciones y el impuesto de compra de cada comunidad autónoma.",
       "statement": "Hipotecas ordenadas por lo que cuestan en euros",
@@ -543,7 +543,7 @@
       "links": {
         "live": "",
         "code": "https://github.com/KORA-Digital-Solutions/lucyERP",
-        "docs": ""
+        "docs": "https://github.com/Lux-source/myCloudDocs/blob/main/migrations/apps/lucyerp.md"
       },
       "lead": "Gestiona la agenda por cabinas, clientes, ventas, stock y caja de una clínica estética, y envía recordatorios automáticos de citas por WhatsApp.",
       "statement": "Un ERP que vive en el PC de la clínica",
@@ -629,7 +629,7 @@
       "links": {
         "live": "",
         "code": "",
-        "docs": ""
+        "docs": "https://github.com/Lux-source/myCloudDocs/blob/main/migrations/apps/relay-copilot.md"
       },
       "lead": "Copiloto para un transportista autónomo que trabaja con Amazon Relay. Lee las ofertas del correo, calcula la rentabilidad real en €/km contando los kilómetros en vacío y propone una respuesta de negociación en español e inglés.",
       "statement": "La IA recomienda, el transportista decide",
@@ -707,7 +707,7 @@
       "links": {
         "live": "",
         "code": "https://github.com/Lux-source/peaje",
-        "docs": ""
+        "docs": "https://github.com/Lux-source/myCloudDocs/blob/main/migrations/apps/peaje.md"
       },
       "lead": "Se coloca entre los agentes de código y los proveedores de LLM, registra el coste exacto de cada petición y aplica presupuestos por clave con corte duro. Un único binario en Go, sin dependencias, con SQLite.",
       "statement": "spent + held ≤ budget, en todo momento",
@@ -777,7 +777,7 @@
       "links": {
         "live": "",
         "code": "",
-        "docs": ""
+        "docs": "https://github.com/Lux-source/myCloudDocs/blob/main/migrations/apps/collaborative-editor.md"
       },
       "lead": "Mi Trabajo Fin de Grado: varias personas editan el mismo código a la vez dentro de un curso de Moodle, sin conflictos y con cada cambio publicado como evento.",
       "statement": "Varias personas, un mismo fichero, cero conflictos",

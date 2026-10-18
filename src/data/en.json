@@ -62,7 +62,7 @@
     "ctaButton": "Ask me about it",
     "code": "Read the code",
     "live": "See it live",
-    "docs": "Read the write-up",
+    "docs": "Architecture on AWS and Azure",
     "source": "Source"
   },
   "about": {
@@ -456,7 +456,7 @@
       "links": {
         "live": "",
         "code": "https://github.com/Lux-source/analista_hipotecas",
-        "docs": ""
+        "docs": "https://github.com/Lux-source/myCloudDocs/blob/main/migrations/apps/mortgage-analyst.md"
       },
       "lead": "Mortgage comparison for the Spanish market that ranks offers by total cost in euros, under Euribor scenarios, including the cost of linked products and each region's purchase tax.",
       "statement": "Mortgages ranked by what they cost in euros",
@@ -543,7 +543,7 @@
       "links": {
         "live": "",
         "code": "https://github.com/KORA-Digital-Solutions/lucyERP",
-        "docs": ""
+        "docs": "https://github.com/Lux-source/myCloudDocs/blob/main/migrations/apps/lucyerp.md"
       },
       "lead": "Handles room-based scheduling, clients, sales, stock and the cash register of an aesthetic clinic, and sends automatic appointment reminders through WhatsApp.",
       "statement": "An ERP that lives on the clinic's PC",
@@ -629,7 +629,7 @@
       "links": {
         "live": "",
         "code": "",
-        "docs": ""
+        "docs": "https://github.com/Lux-source/myCloudDocs/blob/main/migrations/apps/relay-copilot.md"
       },
       "lead": "Copilot for a self-employed haulier working with Amazon Relay. It reads offers from email, computes the real profit per km including empty legs and drafts a negotiation reply in Spanish and English.",
       "statement": "The AI recommends, the driver decides",
@@ -707,7 +707,7 @@
       "links": {
         "live": "",
         "code": "https://github.com/Lux-source/peaje",
-        "docs": ""
+        "docs": "https://github.com/Lux-source/myCloudDocs/blob/main/migrations/apps/peaje.md"
       },
       "lead": "Sits between coding agents and LLM providers, records the exact cost of every request and enforces hard per-key budgets. One Go binary, zero dependencies, backed by SQLite.",
       "statement": "spent + held ≤ budget, at every instant",
@@ -777,7 +777,7 @@
       "links": {
         "live": "",
         "code": "",
-        "docs": ""
+        "docs": "https://github.com/Lux-source/myCloudDocs/blob/main/migrations/apps/collaborative-editor.md"
       },
       "lead": "My final degree project: several people edit the same code at once inside a Moodle course, with no conflicts and every change published as an event.",
       "statement": "Many people, one file, zero conflicts",
