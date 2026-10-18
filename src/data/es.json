@@ -19,7 +19,7 @@
     "phone": "+34 671 901 629",
     "github": "https://github.com/Lux-source",
     "linkedin": "https://linkedin.com/in/lucian-andrei-negoita",
-    "cv": "/cv-lucian-negoita.pdf",
+    "cv": "",
     "photoAlt": "Retrato de Lucian Andrei Negoita"
   },
   "hero": {
@@ -41,7 +41,7 @@
     "flowTitle": "Cómo viaja una decisión",
     "flowSubtitle": "de una petición a algo que funciona",
     "highlightsTitle": "Merece nombrarse",
-    "highlightsHelp": "Dos o tres cosas concretas de este puesto: una plataforma cuya API diseñaste, una decisión que defendiste y ganaste, un número que muestre la escala. Esta es la parte que un responsable de contratación lee dos veces.",
+    "highlightsHelp": "",
     "stackTitle": "En este puesto",
     "prevLabel": "Antes de esto",
     "nextLabel": "Después de esto",
@@ -58,8 +58,8 @@
     "learnedTitle": "Qué me enseñó",
     "stackTitle": "Construido con",
     "documentedIn": "Documentado en",
-    "galleryTitle": "[Captura o diagrama]",
-    "galleryHelp": "Una captura de la consola, una gráfica de CloudWatch o tu propio dibujo de la arquitectura. Una imagen real aquí vale más que tres párrafos.",
+    "galleryTitle": "Vista del proyecto",
+    "galleryHelp": "",
     "nextLabel": "Siguiente proyecto",
     "ctaTitle": "¿Te pica la curiosidad por el código?",
     "ctaButton": "Pregúntame por él",
@@ -71,9 +71,15 @@
   "about": {
     "title": "Un poco sobre mí",
     "body": "Estudié medicina cuatro años antes de cambiarme a ingeniería informática. Resulta que son el mismo trabajo: leer un sistema que no diseñaste tú y averiguar qué le pasa de verdad.",
-    "chips": ["En España", "Trabajo en remoto", "Estudié en inglés"],
+    "chips": [
+      "En España",
+      "Trabajo en remoto",
+      "Estudié en inglés"
+    ],
     "skillsTitle": "Con qué trabajo",
-    "educationTitle": "Dónde estudié"
+    "educationTitle": "Dónde estudié",
+    "certsTitle": "Certificaciones",
+    "certsLink": "Ver credencial"
   },
   "contact": {
     "title": "Construyamos algo",
@@ -93,46 +99,100 @@
     "other": "EN"
   },
   "skills": [
-    { "name": "Arquitectura de soluciones", "featured": true },
-    { "name": "Diseño de APIs REST", "featured": true },
-    { "name": "AWS", "featured": true },
-    { "name": "Java", "featured": false },
-    { "name": "Spring Boot", "featured": false },
-    { "name": "Python", "featured": false },
-    { "name": "TypeScript", "featured": false },
-    { "name": "Angular", "featured": false },
-    { "name": "Linux", "featured": false },
-    { "name": "SQL", "featured": false },
-    { "name": "CI/CD", "featured": false }
+    {
+      "name": "Arquitectura de soluciones",
+      "featured": true
+    },
+    {
+      "name": "Diseño de APIs REST",
+      "featured": true
+    },
+    {
+      "name": "AWS",
+      "featured": true
+    },
+    {
+      "name": "Azure",
+      "featured": true
+    },
+    {
+      "name": "Arquitectura orientada a eventos",
+      "featured": false
+    },
+    {
+      "name": "Kafka",
+      "featured": false
+    },
+    {
+      "name": "Docker y Kubernetes",
+      "featured": false
+    },
+    {
+      "name": "Java",
+      "featured": false
+    },
+    {
+      "name": "Spring Boot",
+      "featured": false
+    },
+    {
+      "name": "Python",
+      "featured": false
+    },
+    {
+      "name": "TypeScript",
+      "featured": false
+    },
+    {
+      "name": "Go",
+      "featured": false
+    },
+    {
+      "name": "SQL",
+      "featured": false
+    },
+    {
+      "name": "CI/CD",
+      "featured": false
+    }
   ],
   "education": [
     {
+      "dates": "2026 — 2027",
+      "title": "Máster en Big Data y Computación en la Nube, UCLM",
+      "note": "(en curso)",
+      "body": "Cloud en AWS con contenedores, serverless y autoescalado. Arquitectura de datos (Data Lake, Lakehouse, Mesh), procesamiento con Spark y Hadoop en EMR, Databricks y Dataproc, streaming con Kafka y Spark Structured Streaming, MLOps y gobierno del dato."
+    },
+    {
       "dates": "2022 — 2026",
       "title": "Grado en Ingeniería Informática, UCLM",
-      "note": ""
+      "note": "",
+      "body": "Modalidad bilingüe. Matrícula de Honor en el TFG y en Ingeniería Web y de Servicios."
     },
     {
       "dates": "2025",
       "title": "Herramientas Digitales para Transporte y Logística, UCLM",
-      "note": ""
+      "note": "",
+      "body": ""
     },
     {
       "dates": "2018 — 2022",
       "title": "Medicina, UCLM",
-      "note": "(sin terminar)"
+      "note": "(sin terminar)",
+      "body": ""
     }
   ],
   "experience": [
     {
       "slug": "capgemini-invent",
       "company": "Capgemini Invent",
-      "role": "Solutions Architect, Development Area",
+      "role": "Arquitecto de Soluciones · Arquitectura de Desarrollo",
       "dates": "Mar 2026 —",
       "datesLong": "Mar 2026 — actualidad",
       "location": "Remoto, España",
       "badge": "Ahora mismo",
       "accent": "terracotta",
-      "summary": "Diseño los límites de las APIs dentro del Development Architecture Service de Repsol, y dejo escrito por qué cada uno está donde está.",
+      "summary": "Diseño y reviso arquitecturas de aplicaciones web, móviles y cloud para el Servicio de Arquitectura de Desarrollo de Repsol, y dejo documentada cada decisión para los equipos que las implementan.",
       "tags": [],
       "client": {
         "name": "Repsol",
@@ -147,38 +207,80 @@
       "duties": [
         {
           "icon": "boundary",
-          "title": "Diseñar el límite",
-          "body": "APIs REST y límites entre servicios para plataformas corporativas: qué posee cada servicio, qué expone y qué nunca debería saber de los demás."
+          "title": "Diseñar la solución",
+          "body": "Arquitecturas para desarrollos a medida (Vue, C#, Node.js) y low-code (OutSystems) sobre Azure y AWS: autenticación, persistencia, integración y procesamiento asíncrono, con escalabilidad, disponibilidad y seguridad alineadas con los estándares corporativos."
         },
         {
           "icon": "document",
           "title": "Dejarlo escrito",
-          "body": "Architecture decision records: las opciones consideradas, la elegida y el motivo. Para que quien venga después herede un argumento y no un misterio."
+          "body": "Documentos de arquitectura (DSA), decisiones razonadas y normativa técnica. Cada diseño explica las alternativas, la elegida y cómo implementarla."
         },
         {
           "icon": "review",
-          "title": "Revisar el código",
-          "body": "Revisión por pares contra las puertas corporativas de calidad y seguridad: el momento en que un diseño sobrevive al contacto con la realidad, o se corrige."
+          "title": "Revisar y gobernar",
+          "body": "Mesas de arquitectura con los equipos y revisiones de diseño y código contra las puertas corporativas de calidad y seguridad."
         }
       ],
       "flow": [
-        { "title": "Llega una necesidad", "body": "Un equipo necesita datos o comportamiento que viven en otro sitio." },
-        { "title": "Opciones sobre la mesa", "body": "Dos o tres formas de trazar el límite, cada una con su coste." },
-        { "title": "El ADR", "body": "Se elige una, se escribe y se adjunta el razonamiento." },
-        { "title": "Revisión y despliegue", "body": "La implementación se revisa contra calidad y seguridad." }
+        {
+          "title": "Llega una necesidad",
+          "body": "Un equipo necesita datos o comportamiento que viven en otro sitio."
+        },
+        {
+          "title": "Opciones sobre la mesa",
+          "body": "Dos o tres formas de trazar el límite, cada una con su coste."
+        },
+        {
+          "title": "El ADR",
+          "body": "Se elige una, se escribe y se adjunta el razonamiento."
+        },
+        {
+          "title": "Revisión y despliegue",
+          "body": "La implementación se revisa contra calidad y seguridad."
+        }
       ],
       "highlights": [
-        "[Concreto 1 — qué diseñaste y para quién]",
-        "[Concreto 2 — una decisión y por qué salió a tu favor]",
-        "[Concreto 3 — escala: servicios, equipos, peticiones, lo que sea cierto]"
+        "Marco corporativo para adoptar agentes de IA en el ciclo de desarrollo: indexación RAG del corpus de arquitectura, modelo de despliegue, acceso, seguridad e integración.",
+        "Normativa de desarrollo por fases del ciclo de vida, con estándares de pipelines, contenedores y seguridad.",
+        "Diseños de solución (DSA) para aplicaciones a medida y OutSystems sobre las plantillas corporativas."
       ],
       "stack": [
-        { "name": "Diseño de APIs REST", "featured": true },
-        { "name": "Límites entre servicios", "featured": true },
-        { "name": "ADRs", "featured": false },
-        { "name": "Revisión de código", "featured": false },
-        { "name": "Puertas de seguridad", "featured": false },
-        { "name": "[Añadir stack]", "featured": false }
+        {
+          "name": "Azure",
+          "featured": true
+        },
+        {
+          "name": "AWS",
+          "featured": true
+        },
+        {
+          "name": "Diseño de APIs REST",
+          "featured": true
+        },
+        {
+          "name": "Vue",
+          "featured": false
+        },
+        {
+          "name": "C# / .NET",
+          "featured": false
+        },
+        {
+          "name": "Node.js",
+          "featured": false
+        },
+        {
+          "name": "OutSystems",
+          "featured": false
+        },
+        {
+          "name": "Azure DevOps",
+          "featured": false
+        },
+        {
+          "name": "Agentes de IA y RAG",
+          "featured": false
+        }
       ]
     },
     {
@@ -191,7 +293,11 @@
       "badge": "",
       "accent": "mustard",
       "summary": "Llevé Spring Boot y Angular a una plataforma pública de la Administración, y mantuve viva su mitad antigua en JBoss mientras lo hacía.",
-      "tags": ["Spring Boot", "Angular", "Python"],
+      "tags": [
+        "Spring Boot",
+        "Angular",
+        "Python"
+      ],
       "client": {
         "name": "Administración pública",
         "body": "Una aplicación de cara al ciudadano: usuarios reales, incidencias reales y una base de código heredada por debajo.",
@@ -216,43 +322,73 @@
         {
           "icon": "review",
           "title": "Mantenerlo en pie",
-          "body": "Resolución de incidencias en producción sobre una base de código heredada en Java/JBoss, y pipelines en Python para migrar los datos al modelo nuevo."
+          "body": "Automaticé en Python la extracción y transformación de datos complejos (BLOB/CLOB) desde bases de datos heredadas, y analicé el código Java/JBoss antiguo para trazar una migración sin pérdida de datos."
         }
       ],
       "flow": [],
       "highlights": [
-        "[Concreto 1 — qué parte de la aplicación era tuya]",
-        "[Concreto 2 — una incidencia que resolviste y cómo]",
-        "[Concreto 3 — volumen de datos migrados, usuarios, lo que sea cierto]"
+        "ETL en Python para tipos BLOB/CLOB que sustituyó un proceso manual propenso a errores.",
+        "Mapa de dependencias del código Java heredado para planificar la migración sin perder datos."
       ],
       "stack": [
-        { "name": "Spring Boot", "featured": true },
-        { "name": "JPA / Hibernate", "featured": true },
-        { "name": "Liquibase", "featured": false },
-        { "name": "Angular", "featured": false },
-        { "name": "TypeScript", "featured": false },
-        { "name": "JBoss", "featured": false },
-        { "name": "Python", "featured": false }
+        {
+          "name": "Spring Boot",
+          "featured": true
+        },
+        {
+          "name": "JPA / Hibernate",
+          "featured": true
+        },
+        {
+          "name": "Liquibase",
+          "featured": false
+        },
+        {
+          "name": "Angular",
+          "featured": false
+        },
+        {
+          "name": "TypeScript",
+          "featured": false
+        },
+        {
+          "name": "JBoss",
+          "featured": false
+        },
+        {
+          "name": "Python",
+          "featured": false
+        },
+        {
+          "name": "SQL",
+          "featured": false
+        },
+        {
+          "name": "SVN",
+          "featured": false
+        }
       ]
     },
     {
       "slug": "freelance",
       "company": "Por mi cuenta",
       "role": "Infraestructura y operaciones · Freelance",
-      "dates": "[FECHAS]",
-      "datesLong": "[FECHAS] · ~4 meses",
+      "dates": "2021",
+      "datesLong": "2021 · ~4 meses",
       "location": "España",
       "badge": "",
       "accent": "sand",
       "summary": "Mis propios servidores Linux, de la máquina vacía al servicio funcionando. Nadie más de guardia a las 3 de la mañana.",
-      "tags": ["Linux"],
+      "tags": [
+        "Linux"
+      ],
       "client": {
         "name": "Yo mismo",
         "body": "Sin equipo, sin rotación de guardias y sin nadie a quien escalar. Si se caía, me despertaba yo.",
         "facts": [
           "Autónomo",
           "Aproximadamente cuatro meses",
-          "[FECHAS por confirmar]"
+          "2021"
         ]
       },
       "statement": "Operar algo tú solo te enseña una cosa que no se aprende leyendo: <em>lo que se rompe primero</em>.",
@@ -275,66 +411,435 @@
       ],
       "flow": [],
       "highlights": [
-        "[Concreto 1 — qué corría en esos servidores]",
-        "[Concreto 2 — el peor incidente y qué cambiaste después]",
-        "[FECHAS — el rango exacto]"
+        "Rigs de minería de Ethereum sobre HiveOS (Linux): monitorización, ajuste de rendimiento y resolución de incidencias."
       ],
       "stack": [
-        { "name": "Linux", "featured": true },
-        { "name": "Aprovisionamiento", "featured": false },
-        { "name": "Despliegue", "featured": false },
-        { "name": "Monitorización", "featured": false }
+        {
+          "name": "Linux",
+          "featured": true
+        },
+        {
+          "name": "Aprovisionamiento",
+          "featured": false
+        },
+        {
+          "name": "Despliegue",
+          "featured": false
+        },
+        {
+          "name": "Monitorización",
+          "featured": false
+        }
       ]
     }
   ],
   "projectList": [
     {
-      "slug": "tfg",
-      "title": "[NOMBRE DEL TFG]",
-      "kind": "En producción",
-      "kindStyle": "live",
+      "slug": "analista-hipotecas",
+      "title": "Analista de Hipotecas",
+      "kind": "En desarrollo",
+      "kindStyle": "muted",
       "accent": "terracotta",
-      "icon": "orbit",
-      "summary": "Mi proyecto de fin de grado: el raro que se desplegó y siguió funcionando. <span class=\"placeholder\">[Una línea: qué hace.]</span>",
+      "icon": "chart",
+      "summary": "Compara hipotecas por lo que cuestan en euros durante toda la vida del préstamo, no por su TAE.",
       "tags": [],
-      "links": { "live": "", "code": "", "docs": "" },
-      "lead": "[Una línea larga: qué hace, quién lo usa y el número que demuestra que funcionó.]",
-      "statement": "",
-      "architecture": [],
-      "why": "[Por qué lo construiste, y qué problema real resolvía.]",
+      "links": {
+        "live": "",
+        "code": "https://github.com/Lux-source/analista_hipotecas",
+        "docs": ""
+      },
+      "lead": "Comparador para el mercado español que ordena las ofertas por coste total en euros, con escenarios de Euríbor, el coste de las vinculaciones y el impuesto de compra de cada comunidad autónoma.",
+      "statement": "Hipotecas ordenadas por lo que cuestan en euros",
+      "architecture": [
+        {
+          "icon": "database",
+          "title": "Banco de España",
+          "body": "Ingesta del Euríbor con límite de peticiones, copia en bruto y cuarentena de valores imposibles.",
+          "tone": "sand"
+        },
+        {
+          "icon": "boundary",
+          "title": "Dominio puro",
+          "body": "Motor financiero en Java sin frameworks: amortización francesa, TAE por TIR, bonificaciones e impuestos.",
+          "tone": "terracotta"
+        },
+        {
+          "icon": "bucket",
+          "title": "PostgreSQL",
+          "body": "Ofertas versionadas con SCD2 y esquema en Liquibase. Cada cotización antigua sigue siendo reproducible.",
+          "tone": "olive"
+        },
+        {
+          "icon": "chart",
+          "title": "Angular",
+          "body": "Muestra el ranking y marca qué cifras son estimaciones. No calcula nada.",
+          "tone": "sand"
+        }
+      ],
+      "archSubtitle": "puertos y adaptadores, verificados en cada build",
+      "why": "La TAE engaña en hipotecas variables y mixtas: la normativa la calcula con el Euríbor congelado. Además, una TAE bonificada puede salir más cara en euros cuando los seguros que exige el banco cuestan más que el interés que ahorran. Quería una herramienta que respondiera a la pregunta real: cuánto voy a pagar.",
       "learned": [
-        "[Algo que te enseñó y que no habrías aprendido en clase]",
-        "[Algo que harías distinto hoy]"
+        "Las reglas de arquitectura valen cuando rompen el build. ArchUnit impide usar double para dinero y que el dominio importe Spring.",
+        "Los tests con Testcontainers encontraron un bug que ninguna revisión habría visto: una propiedad de zona horaria de Hibernate movía una hora el centinela de fin de vigencia.",
+        "Cada cifra que sale de una ley lleva su referencia legal en la base de datos, y se valida al arrancar."
       ],
       "stack": [
-        { "name": "[STACK]", "featured": true }
+        {
+          "name": "Java 17",
+          "featured": true
+        },
+        {
+          "name": "Spring Boot 3",
+          "featured": true
+        },
+        {
+          "name": "Arquitectura hexagonal",
+          "featured": true
+        },
+        {
+          "name": "ArchUnit",
+          "featured": false
+        },
+        {
+          "name": "PostgreSQL",
+          "featured": false
+        },
+        {
+          "name": "Liquibase",
+          "featured": false
+        },
+        {
+          "name": "Testcontainers",
+          "featured": false
+        },
+        {
+          "name": "Angular",
+          "featured": false
+        }
+      ],
+      "docsLabel": "12 ADRs",
+      "docsUrl": "https://github.com/Lux-source/analista_hipotecas/tree/main/docs/adr",
+      "image": "/projects/mortgage.webp"
+    },
+    {
+      "slug": "lucyerp",
+      "title": "LucyERP",
+      "kind": "ERP a medida",
+      "kindStyle": "muted",
+      "accent": "olive",
+      "icon": "briefcase",
+      "summary": "ERP para clínicas estéticas: agenda por cabinas, ventas, stock y caja, con recordatorios por WhatsApp.",
+      "tags": [],
+      "links": {
+        "live": "",
+        "code": "https://github.com/KORA-Digital-Solutions/lucyERP",
+        "docs": ""
+      },
+      "lead": "Gestiona la agenda por cabinas, clientes, ventas, stock y caja de una clínica estética, y envía recordatorios automáticos de citas por WhatsApp.",
+      "statement": "Un ERP que vive en el PC de la clínica",
+      "architecture": [
+        {
+          "icon": "chart",
+          "title": "Recepción",
+          "body": "Agenda por cabinas y profesionales, fichas de cliente y caja del día.",
+          "tone": "sand"
+        },
+        {
+          "icon": "boundary",
+          "title": "Next.js standalone",
+          "body": "Aplicación y API en un único servidor Node, con Prisma sobre un fichero SQLite.",
+          "tone": "terracotta"
+        },
+        {
+          "icon": "bolt",
+          "title": "Worker",
+          "body": "Proceso con node-cron que programa los recordatorios.",
+          "tone": "olive"
+        },
+        {
+          "icon": "cloud",
+          "title": "WhatsApp Cloud API",
+          "body": "Recordatorios de cita a los clientes.",
+          "tone": "sand"
+        }
+      ],
+      "archSubtitle": "on-premise, sin servidor externo",
+      "why": "Una clínica pequeña no necesita un SaaS con suscripción mensual ni un servidor que mantener. Necesita algo que funcione en el ordenador de recepción, que no dependa de internet para trabajar y cuyos datos se puedan copiar en un pendrive.",
+      "learned": [
+        "Desplegar on-premise obliga a pensar en lo que en la nube das por hecho: servicio de Windows, copias de seguridad y actualización del esquema sin perder datos.",
+        "SQLite es una base de datos muy seria cuando hay un solo puesto escribiendo."
+      ],
+      "stack": [
+        {
+          "name": "Next.js 16",
+          "featured": true
+        },
+        {
+          "name": "React 19",
+          "featured": true
+        },
+        {
+          "name": "TypeScript",
+          "featured": true
+        },
+        {
+          "name": "Prisma",
+          "featured": false
+        },
+        {
+          "name": "SQLite",
+          "featured": false
+        },
+        {
+          "name": "Tailwind CSS",
+          "featured": false
+        },
+        {
+          "name": "WhatsApp Cloud API",
+          "featured": false
+        },
+        {
+          "name": "node-cron",
+          "featured": false
+        }
       ],
       "docsLabel": "",
-      "docsUrl": ""
+      "docsUrl": "",
+      "image": "/projects/lucyerp.webp"
+    },
+    {
+      "slug": "relay-copilot",
+      "title": "Relay Traffic Copilot",
+      "kind": "Para un familiar",
+      "kindStyle": "muted",
+      "accent": "mustard",
+      "icon": "bolt",
+      "summary": "Copiloto con IA que evalúa ofertas de carga de Amazon Relay en €/km reales y propone cómo negociarlas.",
+      "tags": [],
+      "links": {
+        "live": "",
+        "code": "",
+        "docs": ""
+      },
+      "lead": "Copiloto para un transportista autónomo que trabaja con Amazon Relay. Lee las ofertas del correo, calcula la rentabilidad real en €/km contando los kilómetros en vacío y propone una respuesta de negociación en español e inglés.",
+      "statement": "La IA recomienda, el transportista decide",
+      "architecture": [
+        {
+          "icon": "mail",
+          "title": "Gmail",
+          "body": "Detecta ofertas de carga cada pocos minutos.",
+          "tone": "sand"
+        },
+        {
+          "icon": "boundary",
+          "title": "Evaluador",
+          "body": "Modelo de costes en tres bloques, precio oficial del gasoil y clasificación en seis niveles.",
+          "tone": "terracotta"
+        },
+        {
+          "icon": "bolt",
+          "title": "Claude",
+          "body": "Redacta la contraoferta en español e inglés y ajusta la estrategia según la temporada.",
+          "tone": "olive"
+        },
+        {
+          "icon": "chart",
+          "title": "Panel Flask",
+          "body": "Nada se envía ni se acepta sin aprobación humana.",
+          "tone": "sand"
+        }
+      ],
+      "archSubtitle": "con aprobación humana en cada paso",
+      "why": "Lo construí para un familiar camionero. El precio por kilómetro que anuncia la plataforma no incluye el viaje en vacío hasta la carga ni el coste real del camión, y decidir con prisa entre decenas de ofertas al día cuesta dinero.",
+      "learned": [
+        "La regla más importante del sistema es una restricción: la IA nunca actúa sola.",
+        "Centralizar el cliente de IA en un único módulo permitió cambiar de proveedor sin tocar el resto del código."
+      ],
+      "stack": [
+        {
+          "name": "Python",
+          "featured": true
+        },
+        {
+          "name": "Claude API",
+          "featured": true
+        },
+        {
+          "name": "Flask",
+          "featured": true
+        },
+        {
+          "name": "Gmail API",
+          "featured": false
+        },
+        {
+          "name": "Playwright",
+          "featured": false
+        },
+        {
+          "name": "SQLite",
+          "featured": false
+        }
+      ],
+      "docsLabel": "",
+      "docsUrl": "",
+      "image": "/projects/relay.webp"
+    },
+    {
+      "slug": "peaje",
+      "title": "peaje",
+      "kind": "En desarrollo",
+      "kindStyle": "muted",
+      "accent": "terracotta",
+      "icon": "boundary",
+      "summary": "Proxy autoalojado que contabiliza el gasto en LLM por petición y corta en seco al agotar el presupuesto.",
+      "tags": [],
+      "links": {
+        "live": "",
+        "code": "https://github.com/Lux-source/peaje",
+        "docs": ""
+      },
+      "lead": "Se coloca entre los agentes de código y los proveedores de LLM, registra el coste exacto de cada petición y aplica presupuestos por clave con corte duro. Un único binario en Go, sin dependencias, con SQLite.",
+      "statement": "spent + held ≤ budget, en todo momento",
+      "architecture": [
+        {
+          "icon": "code",
+          "title": "Agente de código",
+          "body": "Claude Code, Cursor o cualquier cliente compatible.",
+          "tone": "sand"
+        },
+        {
+          "icon": "boundary",
+          "title": "Reserva",
+          "body": "Antes de reenviar, reserva el coste máximo posible contra el presupuesto.",
+          "tone": "terracotta"
+        },
+        {
+          "icon": "cloud",
+          "title": "Proveedor",
+          "body": "El stream SSE pasa sin buffer. El coste real sale del campo usage del proveedor.",
+          "tone": "olive"
+        },
+        {
+          "icon": "database",
+          "title": "Liquidación",
+          "body": "Liquida exactamente una vez sobre un journal resistente a caídas.",
+          "tone": "sand"
+        }
+      ],
+      "archSubtitle": "reserva y liquidación en dos fases",
+      "why": "Los equipos que adoptan agentes de código descubren el gasto en la factura, un mes tarde. Las APIs de facturación llevan 24 a 48 horas de retraso y los gateways que controlan coste lo hacen sin garantías justo donde está el dinero: entre la admisión y la liquidación de peticiones concurrentes.",
+      "learned": [
+        "El dinero va en enteros (micro-USD), nunca en coma flotante.",
+        "El núcleo del ledger lo escribo yo a mano. Es la parte que tengo que poder defender línea a línea."
+      ],
+      "stack": [
+        {
+          "name": "Go",
+          "featured": true
+        },
+        {
+          "name": "SQLite",
+          "featured": true
+        },
+        {
+          "name": "SSE",
+          "featured": true
+        },
+        {
+          "name": "Contabilidad en dos fases",
+          "featured": false
+        }
+      ],
+      "docsLabel": "",
+      "docsUrl": "",
+      "image": "/projects/peaje.webp"
     },
     {
       "slug": "plataforma-colaborativa",
-      "title": "Plataforma de programación colaborativa",
-      "kind": "Universidad",
+      "title": "Editor colaborativo en tiempo real",
+      "kind": "TFG · Matrícula de Honor",
       "kindStyle": "muted",
       "accent": "mustard",
       "icon": "code",
-      "summary": "<span class=\"placeholder\">[Una línea: qué permite hacer a varias personas a la vez, y cuál es la parte difícil.]</span>",
+      "summary": "Programación colaborativa en tiempo real dentro de Moodle, con CRDTs y eventos en Kafka.",
       "tags": [],
-      "links": { "live": "", "code": "", "docs": "" },
-      "lead": "[Qué problema resuelve, cuántas personas pueden editar a la vez y cuál es la parte genuinamente difícil: resolución de conflictos, presencia o latencia.]",
-      "statement": "",
-      "architecture": [],
-      "why": "[Por qué este proyecto y no otro.]",
+      "links": {
+        "live": "",
+        "code": "",
+        "docs": ""
+      },
+      "lead": "Mi Trabajo Fin de Grado: varias personas editan el mismo código a la vez dentro de un curso de Moodle, sin conflictos y con cada cambio publicado como evento.",
+      "statement": "Varias personas, un mismo fichero, cero conflictos",
+      "architecture": [
+        {
+          "icon": "code",
+          "title": "Plugin de Moodle",
+          "body": "El editor vive dentro del curso, con los usuarios y permisos de Moodle.",
+          "tone": "sand"
+        },
+        {
+          "icon": "orbit",
+          "title": "Hocuspocus + Yjs",
+          "body": "Sincroniza la edición con CRDTs sobre WebSocket.",
+          "tone": "terracotta"
+        },
+        {
+          "icon": "bolt",
+          "title": "Kafka",
+          "body": "Cada cambio se publica como evento para su procesamiento.",
+          "tone": "olive"
+        },
+        {
+          "icon": "chart",
+          "title": "Selenium",
+          "body": "Pruebas E2E con hasta 10 usuarios editando a la vez.",
+          "tone": "sand"
+        }
+      ],
+      "archSubtitle": "CRDTs y eventos, de extremo a extremo",
+      "why": "Quería un problema de sistemas distribuidos de verdad: edición concurrente donde la latencia y el orden de los eventos importan, integrada en una plataforma que los alumnos ya usan.",
       "learned": [
-        "[Lo más difícil de la edición concurrente]",
-        "[Qué simplificarías si lo reescribieras]"
+        "Los CRDTs resuelven la convergencia, pero no la presencia ni los permisos: eso hay que diseñarlo aparte.",
+        "Probar con 10 navegadores reales a la vez enseña más que cualquier test unitario."
       ],
       "stack": [
-        { "name": "[STACK]", "featured": true }
+        {
+          "name": "Kafka",
+          "featured": true
+        },
+        {
+          "name": "Yjs",
+          "featured": true
+        },
+        {
+          "name": "Hocuspocus",
+          "featured": true
+        },
+        {
+          "name": "WebSocket",
+          "featured": false
+        },
+        {
+          "name": "Moodle (PHP)",
+          "featured": false
+        },
+        {
+          "name": "Docker Compose",
+          "featured": false
+        },
+        {
+          "name": "MariaDB",
+          "featured": false
+        },
+        {
+          "name": "Selenium",
+          "featured": false
+        }
       ],
       "docsLabel": "",
-      "docsUrl": ""
+      "docsUrl": "",
+      "image": "/projects/tfg.webp"
     },
     {
       "slug": "pipeline-serverless",
@@ -344,15 +849,43 @@
       "accent": "olive",
       "icon": "cloud",
       "summary": "Los ficheros aterrizan en S3, Lambda los transforma y DynamoDB los devuelve casi en tiempo real, sin servidores que cuidar.",
-      "tags": ["AWS Lambda", "S3", "DynamoDB"],
-      "links": { "live": "", "code": "", "docs": "https://github.com/Lux-source/myCloudDocs" },
+      "tags": [
+        "AWS Lambda",
+        "S3",
+        "DynamoDB"
+      ],
+      "links": {
+        "live": "",
+        "code": "",
+        "docs": "https://github.com/Lux-source/myCloudDocs"
+      },
       "lead": "Un fichero aterriza en un bucket, el código se despierta, lo transforma y lo deja donde un cuadro de mando puede leerlo casi en tiempo real. No se ejecuta nada cuando no pasa nada.",
       "statement": "Un pipeline sin servidores que cuidar",
       "architecture": [
-        { "icon": "bucket", "title": "Bucket S3", "body": "Llega un fichero en bruto. Ese es el único disparador.", "tone": "sand" },
-        { "icon": "bolt", "title": "Lambda", "body": "Valida, transforma y enriquece. Escala a cero entre eventos.", "tone": "terracotta" },
-        { "icon": "database", "title": "DynamoDB", "body": "Escrito para que la lectura salga barata, no para que la escritura quede bonita.", "tone": "olive" },
-        { "icon": "chart", "title": "Quien pregunte", "body": "Respuestas casi en tiempo real en lugar de un proceso nocturno.", "tone": "sand" }
+        {
+          "icon": "bucket",
+          "title": "Bucket S3",
+          "body": "Llega un fichero en bruto. Ese es el único disparador.",
+          "tone": "sand"
+        },
+        {
+          "icon": "bolt",
+          "title": "Lambda",
+          "body": "Valida, transforma y enriquece. Escala a cero entre eventos.",
+          "tone": "terracotta"
+        },
+        {
+          "icon": "database",
+          "title": "DynamoDB",
+          "body": "Escrito para que la lectura salga barata, no para que la escritura quede bonita.",
+          "tone": "olive"
+        },
+        {
+          "icon": "chart",
+          "title": "Quien pregunte",
+          "body": "Respuestas casi en tiempo real en lugar de un proceso nocturno.",
+          "tone": "sand"
+        }
       ],
       "why": "Quería entender la arquitectura orientada a eventos pagándola, no leyendo sobre ella. Un proceso nocturno por lotes es fácil. Algo que reacciona en cuanto aterriza un fichero, no cuesta nada mientras está parado y sigue comportándose cuando llegan dos a la vez: ahí es donde están las decisiones de verdad.",
       "learned": [
@@ -361,14 +894,45 @@
         "Escribir primero el runbook simplificó la arquitectura: todo lo que no supe explicar, lo quité."
       ],
       "stack": [
-        { "name": "AWS Lambda", "featured": true },
-        { "name": "S3", "featured": true },
-        { "name": "DynamoDB", "featured": true },
-        { "name": "Python", "featured": false },
-        { "name": "IAM", "featured": false }
+        {
+          "name": "AWS Lambda",
+          "featured": true
+        },
+        {
+          "name": "S3",
+          "featured": true
+        },
+        {
+          "name": "DynamoDB",
+          "featured": true
+        },
+        {
+          "name": "Python",
+          "featured": false
+        },
+        {
+          "name": "IAM",
+          "featured": false
+        }
       ],
       "docsLabel": "myCloudDocs",
-      "docsUrl": "https://github.com/Lux-source/myCloudDocs"
+      "docsUrl": "https://github.com/Lux-source/myCloudDocs",
+      "archSubtitle": "orientado a eventos, de principio a fin",
+      "image": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect – Associate",
+      "issuer": "Amazon Web Services",
+      "date": "2025",
+      "url": "https://www.credly.com/badges/278a6a0e-535d-4be0-a5ef-ef3ad24bb849"
+    },
+    {
+      "name": "Claude Certified Associate – Foundations",
+      "issuer": "Anthropic",
+      "date": "2026",
+      "url": "https://www.credly.com/badges/169cced7-e5bd-44cc-86c9-c530ea1c36cf"
     }
   ]
 }

@@ -14,7 +14,7 @@ const t = getContent(lang);
 	id="about"
 	class="mx-auto grid max-w-[1280px] scroll-mt-24 gap-[18px] px-5 pt-16 sm:px-8 lg:grid-cols-[1.1fr_1fr] lg:px-16 lg:pt-20"
 >
-	<div class="flex flex-col gap-4 rounded-[22px] bg-ink p-7 text-cream sm:p-9 dark:bg-night-surface">
+	<div class="flex flex-col gap-4 self-start rounded-[22px] bg-ink p-7 text-cream sm:p-9 dark:bg-night-surface">
 		<h2 class="font-display text-3xl tracking-tight sm:text-[34px]">{t.about.title}</h2>
 		<p class="text-[17px] leading-relaxed text-cream/80">{t.about.body}</p>
 		<ul class="mt-2 flex flex-wrap gap-2">
@@ -63,6 +63,37 @@ const t = getContent(lang);
 							<span class="text-[15.5px] font-semibold">
 								{item.title}
 								{item.note && <span class="text-sm font-normal text-faint"> {item.note}</span>}
+								{item.body && (
+									<span class="mt-1 block text-[14px] font-normal leading-relaxed text-muted dark:text-cream/70">
+										{item.body}
+									</span>
+								)}
+							</span>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+		<div class="h-px bg-line dark:bg-night-line"></div>
+
+		<div class="flex flex-col gap-3">
+			<h3 class="font-display text-2xl tracking-tight">{t.about.certsTitle}</h3>
+			<ul class="flex flex-col gap-3">
+				{
+					t.certifications.map((cert) => (
+						<li class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-4">
+							<span class="w-[92px] shrink-0 text-[13px] text-faint">{cert.date}</span>
+							<span class="text-[15.5px] font-semibold">
+								{cert.name}
+								<span class="text-sm font-normal text-faint"> · {cert.issuer} · </span>
+								<a
+									href={cert.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="text-sm font-semibold text-terracotta hover:underline dark:text-terracotta-light"
+								>
+									{t.about.certsLink}
+								</a>
 							</span>
 						</li>
 					))
