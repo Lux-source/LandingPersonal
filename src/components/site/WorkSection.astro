@@ -24,7 +24,7 @@ const DOT: Record<string, string> = {
 		<span class="text-[15px] text-faint">{t.work.subtitle}</span>
 	</div>
 
-	<ul class="flex flex-col gap-4">
+	<ul data-work-list class="flex flex-col gap-4">
 		{
 			t.experience.map((job) => (
 				<li>
@@ -97,3 +97,9 @@ const DOT: Record<string, string> = {
 		}
 	</ul>
 </section>
+
+<script>
+	import { revealOnScroll } from "@/scripts/reveal";
+	// Each stop on the timeline slides in from the left as it reaches the viewport.
+	revealOnScroll(document.querySelector("[data-work-list]"), { x: -20 }, 0.12);
+</script>
