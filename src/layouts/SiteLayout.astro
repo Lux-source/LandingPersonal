@@ -3,6 +3,11 @@ import Nav from "@/components/site/Nav.astro";
 import SiteFooter from "@/components/site/SiteFooter.astro";
 import { getContent, otherLang, alternatePath } from "@/i18n";
 import type { Lang, PageKind } from "@/i18n";
+import "@fontsource/gloock/400.css";
+import "@fontsource/karla/400.css";
+import "@fontsource/karla/500.css";
+import "@fontsource/karla/600.css";
+import "@fontsource/karla/700.css";
 
 interface Props {
 	lang: Lang;
@@ -38,12 +43,6 @@ const altLang = otherLang(lang);
 		<meta property="og:description" content={pageDescription} />
 		<meta property="og:locale" content={lang === "es" ? "es_ES" : "en_GB"} />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:wght@400;500;600;700&display=swap"
-		/>
 
 		<script is:inline>
 			// Runs before paint so the page never flashes the wrong theme.
@@ -102,3 +101,8 @@ const altLang = otherLang(lang);
 		</style>
 	</body>
 </html>
+
+<script>
+	import { initMotion } from "@/scripts/motion";
+	initMotion();
+</script>

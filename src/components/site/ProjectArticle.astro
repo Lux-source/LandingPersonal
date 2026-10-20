@@ -36,7 +36,7 @@ const hasLink = project.links.live || project.links.code || project.links.docs;
 		{t.projects.backToList}
 	</a>
 
-	<header class="mt-4 flex flex-col gap-5">
+	<header data-entrance class="mt-4 flex flex-col gap-5">
 		<div class="flex flex-wrap items-center gap-2.5">
 			<span
 				class:list={[
@@ -118,7 +118,7 @@ const hasLink = project.links.live || project.links.code || project.links.docs;
 					{project.archSubtitle && <span class="text-[15px] text-faint">{project.archSubtitle}</span>}
 				</div>
 
-				<ol class="flex flex-col items-stretch gap-3 lg:flex-row">
+				<ol data-reveal-list="x" data-stagger="0.1" class="flex flex-col items-stretch gap-3 lg:flex-row">
 					{project.architecture.map((step, index) => (
 						<>
 							<li
@@ -170,7 +170,7 @@ const hasLink = project.links.live || project.links.code || project.links.docs;
 			<h2 class="font-display text-[26px] tracking-tight lg:text-[30px]">
 				{t.projects.learnedTitle}
 			</h2>
-			<ul class="flex flex-col gap-2.5">
+			<ul data-reveal-list="y" data-stagger="0.06" class="flex flex-col gap-2.5">
 				{
 					project.learned.map((item, index) => (
 						<li class="flex items-start gap-3">
@@ -199,7 +199,7 @@ const hasLink = project.links.live || project.links.code || project.links.docs;
 			class="flex flex-col gap-4 rounded-[22px] bg-ink p-7 text-cream sm:p-8 dark:bg-night-surface"
 		>
 			<h2 class="font-display text-[26px] tracking-tight lg:text-[28px]">{t.projects.stackTitle}</h2>
-			<ul class="flex flex-wrap gap-2">
+			<ul data-reveal-list="y" data-stagger="0.03" class="flex flex-wrap gap-2">
 				{
 					project.stack.map((item) => (
 						<li
@@ -242,7 +242,7 @@ const hasLink = project.links.live || project.links.code || project.links.docs;
 
 		{
 			project.image && (
-				<figure class="overflow-hidden rounded-[22px] border border-line bg-white dark:border-night-line dark:bg-night-surface">
+				<figure data-reveal class="overflow-hidden rounded-[22px] border border-line bg-white dark:border-night-line dark:bg-night-surface">
 					<img src={project.image} alt={`${t.projects.galleryTitle}: ${project.title}`} loading="lazy" class="h-full w-full object-cover object-top" />
 				</figure>
 			)

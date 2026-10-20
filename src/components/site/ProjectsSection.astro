@@ -21,9 +21,9 @@ const BLOCK: Record<string, string> = {
 	id="projects"
 	class="mx-auto max-w-[1280px] scroll-mt-24 px-5 pt-16 sm:px-8 lg:px-16 lg:pt-20"
 >
-	<h2 class="mb-7 font-display text-4xl tracking-tight lg:text-[44px]">{t.projects.title}</h2>
+	<h2 data-reveal class="mb-7 font-display text-4xl tracking-tight lg:text-[44px]">{t.projects.title}</h2>
 
-	<ul data-project-grid class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-[18px]">
+	<ul data-reveal-list="y" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-[18px]">
 		{
 			t.projectList.map((project) => (
 				<li class="flex">
@@ -82,9 +82,3 @@ const BLOCK: Record<string, string> = {
 		}
 	</ul>
 </section>
-
-<script>
-	import { revealOnScroll } from "@/scripts/reveal";
-	// Cards rise in as the grid scrolls into view, in rows, once.
-	revealOnScroll(document.querySelector("[data-project-grid]"), { y: 28 });
-</script>

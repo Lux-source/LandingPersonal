@@ -14,10 +14,10 @@ const t = getContent(lang);
 	id="about"
 	class="mx-auto grid max-w-[1280px] scroll-mt-24 gap-[18px] px-5 pt-16 sm:px-8 lg:grid-cols-[1.1fr_1fr] lg:px-16 lg:pt-20"
 >
-	<div class="flex flex-col gap-4 self-start rounded-[22px] bg-ink p-7 text-cream sm:p-9 dark:bg-night-surface">
+	<div data-reveal class="flex flex-col gap-4 self-start rounded-[22px] bg-ink p-7 text-cream sm:p-9 dark:bg-night-surface">
 		<h2 class="font-display text-3xl tracking-tight sm:text-[34px]">{t.about.title}</h2>
 		<p class="text-[17px] leading-relaxed text-cream/80">{t.about.body}</p>
-		<ul class="mt-2 flex flex-wrap gap-2">
+		<ul data-reveal-list="y" data-stagger="0.04" class="mt-2 flex flex-wrap gap-2">
 			{
 				t.about.chips.map((chip) => (
 					<li class="rounded-full border border-white/15 px-4 py-2 text-[13.5px] font-semibold">
@@ -29,11 +29,12 @@ const t = getContent(lang);
 	</div>
 
 	<div
+		data-reveal
 		class="flex flex-col gap-5 rounded-[22px] border border-line bg-white p-7 sm:p-8 dark:border-night-line dark:bg-night-surface"
 	>
 		<div class="flex flex-col gap-3">
 			<h3 class="font-display text-2xl tracking-tight">{t.about.skillsTitle}</h3>
-			<ul class="flex flex-wrap gap-2">
+			<ul data-reveal-list="y" data-stagger="0.03" class="flex flex-wrap gap-2">
 				{
 					t.skills.map((skill) => (
 						<li

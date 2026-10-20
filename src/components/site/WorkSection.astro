@@ -19,12 +19,12 @@ const DOT: Record<string, string> = {
 ---
 
 <section id="work" class="mx-auto max-w-[1280px] scroll-mt-24 px-5 pt-16 sm:px-8 lg:px-16 lg:pt-20">
-	<div class="mb-8 flex flex-wrap items-baseline gap-4">
+	<div data-reveal class="mb-8 flex flex-wrap items-baseline gap-4">
 		<h2 class="font-display text-4xl tracking-tight lg:text-[44px]">{t.work.title}</h2>
 		<span class="text-[15px] text-faint">{t.work.subtitle}</span>
 	</div>
 
-	<ul data-work-list class="flex flex-col gap-4">
+	<ul data-reveal-list="x" data-stagger="0.12" class="flex flex-col gap-4">
 		{
 			t.experience.map((job) => (
 				<li>
@@ -97,9 +97,3 @@ const DOT: Record<string, string> = {
 		}
 	</ul>
 </section>
-
-<script>
-	import { revealOnScroll } from "@/scripts/reveal";
-	// Each stop on the timeline slides in from the left as it reaches the viewport.
-	revealOnScroll(document.querySelector("[data-work-list]"), { x: -20 }, 0.12);
-</script>

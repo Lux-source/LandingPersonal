@@ -35,7 +35,7 @@ const DOT = ["bg-terracotta", "bg-mustard", "bg-olive"];
 
 	<!-- header -->
 	<div class="mt-4 flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-12">
-		<header class="flex min-w-0 flex-1 flex-col gap-4">
+		<header data-entrance class="flex min-w-0 flex-1 flex-col gap-4">
 			<div class="flex flex-wrap items-center gap-3">
 				{
 					job.badge && (
@@ -57,7 +57,7 @@ const DOT = ["bg-terracotta", "bg-mustard", "bg-olive"];
 			<p class="text-lg font-bold text-terracotta lg:text-[22px] dark:text-terracotta-light">
 				{job.role}
 			</p>
-			<Squiggle class="w-[170px] lg:w-[200px]" />
+			<Squiggle class="w-[170px] lg:w-[200px]" data-draw />
 		</header>
 
 		<aside
@@ -71,7 +71,7 @@ const DOT = ["bg-terracotta", "bg-mustard", "bg-olive"];
 			</h2>
 			<p class="text-[15px] leading-relaxed text-muted dark:text-cream/75">{job.client.body}</p>
 			<div class="h-px bg-line dark:bg-night-line"></div>
-			<ul class="flex flex-col gap-2.5">
+			<ul data-reveal-list="y" data-stagger="0.06" class="flex flex-col gap-2.5">
 				{
 					job.client.facts.map((fact, index) => (
 						<li class="flex items-center gap-2.5">
@@ -103,7 +103,7 @@ const DOT = ["bg-terracotta", "bg-mustard", "bg-olive"];
 	<!-- what I do -->
 	<section class="mt-12">
 		<h2 class="mb-6 font-display text-[32px] tracking-tight lg:text-[38px]">{t.work.whatIDo}</h2>
-		<div class:list={["grid gap-4", job.duties.length === 4 ? "md:grid-cols-2" : "md:grid-cols-3"]}>
+		<div data-reveal-list="y" class:list={["grid gap-4", job.duties.length === 4 ? "md:grid-cols-2" : "md:grid-cols-3"]}>
 			{
 				job.duties.map((duty, index) => (
 					<div class="flex flex-col gap-3 rounded-[22px] border border-line bg-white p-6 sm:p-7 dark:border-night-line dark:bg-night-surface">
@@ -129,7 +129,7 @@ const DOT = ["bg-terracotta", "bg-mustard", "bg-olive"];
 					<span class="text-[15px] text-faint">{t.work.flowSubtitle}</span>
 				</div>
 
-				<ol class="flex flex-col items-stretch gap-2.5 lg:flex-row lg:items-stretch">
+				<ol data-reveal-list="x" data-stagger="0.1" class="flex flex-col items-stretch gap-2.5 lg:flex-row lg:items-stretch">
 					{job.flow.map((step, index) => (
 						<>
 							<li
@@ -195,7 +195,7 @@ const DOT = ["bg-terracotta", "bg-mustard", "bg-olive"];
 			class="flex flex-col gap-4 rounded-[22px] bg-ink p-7 text-cream sm:p-8 dark:bg-night-surface"
 		>
 			<h2 class="font-display text-[26px] tracking-tight lg:text-[28px]">{t.work.stackTitle}</h2>
-			<ul class="flex flex-wrap gap-2">
+			<ul data-reveal-list="y" data-stagger="0.03" class="flex flex-wrap gap-2">
 				{
 					job.stack.map((item) => (
 						<li
