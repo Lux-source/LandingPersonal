@@ -13,10 +13,11 @@ const t = getContent(lang);
 ---
 
 <section
+	data-hero
 	class="mx-auto flex max-w-[1280px] flex-col items-center gap-10 px-5 pb-4 pt-8 sm:px-8 lg:flex-row lg:gap-16 lg:px-16 lg:pt-14"
 >
 	<div class="flex w-full flex-col items-center gap-5 lg:order-2 lg:w-[400px] lg:shrink-0">
-		<div class="rounded-blob bg-cream-200 p-4 lg:p-[18px] dark:bg-night-surface">
+		<div data-hero-photo class="rounded-blob bg-cream-200 p-4 lg:p-[18px] dark:bg-night-surface">
 			<img
 				src="/me.webp"
 				alt={t.profile.photoAlt}
@@ -27,6 +28,7 @@ const t = getContent(lang);
 			/>
 		</div>
 		<p
+			data-hero-now
 			class="-rotate-2 rounded-2xl bg-olive px-5 py-4 text-[15px] font-semibold leading-snug text-cream shadow-lg shadow-ink/10"
 		>
 			<span class="sr-only">{t.hero.nowLabel}: </span>
@@ -37,22 +39,24 @@ const t = getContent(lang);
 	<div class="flex w-full min-w-0 flex-col gap-5 lg:order-1 lg:flex-1">
 		<div class="flex flex-col gap-3">
 			<p
+				data-hero-item
 				class="text-xs font-bold uppercase tracking-[0.14em] text-terracotta dark:text-terracotta-light"
 			>
 				{t.profile.role}
 			</p>
 			<h1
+				data-hero-item
 				class="font-display text-[46px] leading-[1.03] tracking-tight sm:text-6xl lg:text-[72px] lg:leading-[1.02]"
 			>
 				{t.hero.greeting}<span class="text-terracotta">.</span>
 			</h1>
 		</div>
-		<Squiggle class="-mt-2 w-[190px] lg:w-[240px]" />
-		<p class="max-w-[500px] text-lg leading-relaxed text-muted lg:text-xl dark:text-cream/75">
+		<Squiggle class="-mt-2 w-[190px] lg:w-[240px]" data-hero-squiggle />
+		<p data-hero-item class="max-w-[500px] text-lg leading-relaxed text-muted lg:text-xl dark:text-cream/75">
 			{t.hero.lead}
 		</p>
 
-		<div class="mt-2 flex flex-wrap items-center gap-3">
+		<div data-hero-item class="mt-2 flex flex-wrap items-center gap-3">
 			<a
 				href={`mailto:${t.profile.email}`}
 				class="flex min-h-[54px] flex-1 items-center justify-center gap-2 rounded-full bg-terracotta px-7 text-base font-bold text-white transition-transform hover:scale-[1.02] sm:flex-none"
@@ -81,3 +85,36 @@ const t = getContent(lang);
 		</div>
 	</div>
 </section>
+
+<script>
+	import { gsap } from "gsap";
+
+	// One entrance, once: the text column stacks in, the squiggle draws itself,
+	// the photo and the "now" badge settle into place.
+	const hero = document.querySelector<HTMLElement>("[data-hero]");
+	const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+	if (hero && !reduce) {
+		const items = hero.querySelectorAll("[data-hero-item]");
+		const squiggle = hero.querySelector<SVGPathElement>("[data-hero-squiggle] path");
+		const photo = hero.querySelector("[data-hero-photo]");
+		const now = hero.querySelector("[data-hero-now]");
+
+		const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+		tl.from(items, { y: 24, autoAlpha: 0, duration: 0.7, stagger: 0.12 }, 0);
+
+		if (squiggle) {
+			const length = squiggle.getTotalLength();
+			tl.fromTo(
+				squiggle,
+				{ strokeDasharray: length, strokeDashoffset: length },
+				{ strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut" },
+				0.35,
+			);
+		}
+
+		if (photo) tl.from(photo, { scale: 0.92, autoAlpha: 0, duration: 0.8 }, 0.1);
+		if (now) tl.from(now, { y: 16, rotation: 4, autoAlpha: 0, duration: 0.6, ease: "back.out(1.6)" }, 0.55);
+	}
+</script>

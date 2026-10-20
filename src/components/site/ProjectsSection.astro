@@ -23,7 +23,7 @@ const BLOCK: Record<string, string> = {
 >
 	<h2 class="mb-7 font-display text-4xl tracking-tight lg:text-[44px]">{t.projects.title}</h2>
 
-	<ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-[18px]">
+	<ul data-project-grid class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-[18px]">
 		{
 			t.projectList.map((project) => (
 				<li class="flex">
@@ -82,3 +82,24 @@ const BLOCK: Record<string, string> = {
 		}
 	</ul>
 </section>
+
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+	// Cards rise in as the grid scrolls into view, in rows, once.
+	const grid = document.querySelector<HTMLElement>("[data-project-grid]");
+	const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+	if (grid && !reduce) {
+		gsap.registerPlugin(ScrollTrigger);
+		const cards = grid.querySelectorAll(":scope > li");
+		gsap.set(cards, { y: 28, autoAlpha: 0 });
+		ScrollTrigger.batch(cards, {
+			start: "top 88%",
+			once: true,
+			onEnter: (batch) =>
+				gsap.to(batch, { y: 0, autoAlpha: 1, duration: 0.7, stagger: 0.09, ease: "power3.out", overwrite: true }),
+		});
+	}
+</script>

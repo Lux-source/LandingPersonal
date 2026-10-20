@@ -1,13 +1,15 @@
 ---
 interface Props {
 	class?: string;
+	[key: `data-${string}`]: string | boolean | undefined;
 }
 
-const { class: className = "w-[240px] max-w-full" } = Astro.props;
+const { class: className = "w-[240px] max-w-full", ...rest } = Astro.props;
 ---
 
 <svg
 	class={className}
+	{...rest}
 	viewBox="0 0 240 16"
 	fill="none"
 	preserveAspectRatio="none"
