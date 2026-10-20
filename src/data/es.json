@@ -164,7 +164,7 @@
       "dates": "2022 — 2026",
       "title": "Grado en Ingeniería Informática, UCLM",
       "note": "",
-      "body": "Modalidad bilingüe. Matrícula de Honor en el TFG y en Ingeniería Web y de Servicios."
+      "body": "Modalidad bilingüe. Matrícula de Honor en Ingeniería Web y de Servicios; TFG con mención a Matrícula de Honor."
     },
     {
       "dates": "2025",
@@ -768,7 +768,7 @@
     {
       "slug": "plataforma-colaborativa",
       "title": "Editor colaborativo en tiempo real",
-      "kind": "TFG · Matrícula de Honor",
+      "kind": "TFG · Mención a Matrícula de Honor",
       "kindStyle": "muted",
       "accent": "mustard",
       "icon": "code",
